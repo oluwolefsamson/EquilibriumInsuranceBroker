@@ -8,7 +8,12 @@ export default {
         inter: ["Inter", "sans-serif"],
       },
       colors: {
-        primary: "#6153CD",
+        primary: "green", // Keep your existing primary color
+        green: {
+          DEFAULT: "#10B981", // Set your default green
+          light: "#6EE7B7", // Optional light green
+          dark: "#047857", // Optional dark green
+        },
         secondary: {
           100: "#E2E2D5",
           200: "#888883",

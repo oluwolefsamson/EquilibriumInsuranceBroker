@@ -10,6 +10,7 @@ import Services from "./components/Services/Services";
 import Testimonial from "./components/Testimonial/Testimonial";
 import BlogsComp from "./components/Blogs/BlogsComp.jsx";
 import Footer from "./components/Footer/Footer";
+import AboutUs from "./components/About/AboutUs.jsx";
 
 const App = () => {
   useEffect(() => {
@@ -27,9 +28,10 @@ const App = () => {
       <Navbar />
       <Hero />
       <BrandsLogo />
+      <AboutUs />
       <Services />
       <Testimonial />
-      <BlogsComp />
+      {/* <BlogsComp /> */}
       <Footer />
     </div>
   );
