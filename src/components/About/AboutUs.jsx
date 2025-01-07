@@ -1,5 +1,5 @@
 import React from "react";
-import aboutImage from "../../assets/website/hero2.jpg"; // Replace with the appropriate image path
+import aboutImage from "../../assets/website/aboutImg.jpg"; // Replace with the appropriate image path
 import { FaTrophy } from "react-icons/fa";
 import { FaBriefcase } from "react-icons/fa";
 import { FaClipboardCheck } from "react-icons/fa";
@@ -18,7 +18,7 @@ const AboutUs = () => {
         <div className="flex flex-col md:flex-row items-center gap-12">
           {/* Left Section: Text Content */}
           <div className="md:w-1/2">
-            <h1 className="my-8 border-l-8 text-institution-dark border-primary/50 py-2 pl-2 text-3xl font-bold">
+            <h1 className="my-8 border-l-8  border-institution/50 py-2 pl-2 text-3xl font-bold">
               About Us
             </h1>
             <p className="text-lg mb-6 paragraphText">
@@ -62,7 +62,7 @@ const AboutUs = () => {
         {/* Our Values Section */}
         <div className="mt-16">
           <GradientBackground />
-          <h1 className="my-8 border-l-8 text-institution-dark border-primary/50 py-2 pl-2 text-3xl font-bold">
+          <h1 className="my-8 border-l-8  border-institution/50 py-2 pl-2 text-3xl font-bold">
             Our Core Values
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">

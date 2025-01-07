@@ -40,7 +40,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="relative z-10 w-full dark:bg-gray-950 dark:text-white duration-300 pt-3 pb-9">
+    <div className="relative w-full dark:bg-gray-950 dark:text-white z-50 duration-300 pt-3 pb-9">
       <div className="container py-3 md:py-2">
         <div className="flex justify-between items-center">
           {/* Logo section */}
@@ -53,8 +53,11 @@ const Navbar = () => {
               </p>
             </span>
           </a>
+
           {/* Desktop view Navigation */}
-          <nav className="hidden md:block">
+          <nav className="hidden lg:block">
+            {" "}
+            {/* Using lg instead of md for breakpoint at 800px */}
             <ul className="flex items-center gap-8">
               {MenuLinks.map(({ id, name, link }) => (
                 <li key={id} className="relative py-4">
@@ -70,8 +73,11 @@ const Navbar = () => {
               <DarkMode />
             </ul>
           </nav>
+
           {/* Mobile view Drawer */}
-          <div className="flex items-center gap-4 md:hidden">
+          <div className="flex items-center gap-4 lg:hidden">
+            {" "}
+            {/* Adjusted to hide on lg and above */}
             <DarkMode />
             {/* Mobile Hamburger icon */}
             {showMenu ? (

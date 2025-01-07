@@ -8,7 +8,7 @@ const GradientBackground = () => {
       className="absolute w-[800px] h-[900px] rounded-[50%] blur-lg lg:block hidden"
       style={{
         background:
-          "linear-gradient(to bottom, rgba(34, 197, 94, 0.2), rgba(59, 130, 246, 0.2))",
+          "linear-gradient(to bottom, rgba(34, 197, 94, 0.6), rgba(59, 130, 246, 0.6))",
         opacity: 0.4,
         transform: "none", // Ensure no scaling
       }}

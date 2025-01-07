@@ -63,13 +63,13 @@ const Services = () => {
           <div className="pb-12 text-center space-y-3">
             <h1
               data-aos="fade-up"
-              className="text-3xl font-semibold sm:text-3xl text-violet-950 dark:text-primary"
+              className="text-3xl font-semibold sm:text-3xl  "
             >
               Explore Our Insurance Services
             </h1>
             <p
               data-aos="fade-up"
-              className="text-gray-600 dark:text-gray-400 text-sm"
+              className=" text-sm text-gray-600 dark:text-gray-400"
             >
               At Equilibrium Insurance Brokerage, we offer tailored insurance
               solutions to protect your personal and business assets.

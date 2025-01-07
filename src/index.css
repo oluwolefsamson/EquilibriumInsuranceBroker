@@ -13,6 +13,7 @@ html {
 
 .paragraphText {
   line-height: 2rem; /* Line height for better readability */
+  font-weight: 400;
 }
 
 @layer components {
