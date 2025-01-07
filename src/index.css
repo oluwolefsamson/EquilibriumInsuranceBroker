@@ -20,10 +20,10 @@ html {
     @apply cursor-pointer hover:underline;
   }
   .button-outline {
-    @apply rounded-md border-2 border-primary hover:bg-primary/80 hover:text-black duration-500 py-2 px-6 text-primary tracking-wider;
+    @apply rounded-md border-2 border-institution hover:bg-institution/80 hover:text-black duration-500 py-2 px-6 text-secondary tracking-wider;
   }
 
   .primary-btn {
-    @apply bg-primary text-white hover:bg-primary/80  duration-500 rounded-lg py-2 px-4;
+    @apply bg-institution text-white hover:bg-institution/80  duration-500 rounded-lg py-2 px-4;
   }
 }

@@ -14,6 +14,12 @@ export default {
           light: "#6EE7B7", // Optional light green
           dark: "#047857", // Optional dark green
         },
+        institution: {
+          DEFAULT: "#3B82F6", // Set your default blue
+          light: "#93C5FD", // Optional light blue
+          dark: "#1D4ED8", // Optional dark blue
+        },
+
         secondary: {
           100: "#E2E2D5",
           200: "#888883",

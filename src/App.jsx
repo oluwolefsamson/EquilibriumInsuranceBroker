@@ -11,6 +11,7 @@ import Testimonial from "./components/Testimonial/Testimonial";
 import BlogsComp from "./components/Blogs/BlogsComp.jsx";
 import Footer from "./components/Footer/Footer";
 import AboutUs from "./components/About/AboutUs.jsx";
+import BusinessOutlook from "./components/BusinessOutlook/BusinessOutlook.jsx";
 
 const App = () => {
   useEffect(() => {
@@ -30,6 +31,7 @@ const App = () => {
       <BrandsLogo />
       <AboutUs />
       <Services />
+      <BusinessOutlook />
       <Testimonial />
       {/* <BlogsComp /> */}
       <Footer />

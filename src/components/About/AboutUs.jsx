@@ -6,6 +6,7 @@ import { FaClipboardCheck } from "react-icons/fa";
 import { FaUsers } from "react-icons/fa";
 import { FaLightbulb } from "react-icons/fa";
 import { FaHandsHelping } from "react-icons/fa";
+import GradientBackground from "../GradientBackground";
 
 const AboutUs = () => {
   return (
@@ -17,7 +18,7 @@ const AboutUs = () => {
         <div className="flex flex-col md:flex-row items-center gap-12">
           {/* Left Section: Text Content */}
           <div className="md:w-1/2">
-            <h1 className="my-8 border-l-8 border-primary/50 py-2 pl-2 text-3xl font-bold">
+            <h1 className="my-8 border-l-8 text-institution-dark border-primary/50 py-2 pl-2 text-3xl font-bold">
               About Us
             </h1>
             <p className="text-lg mb-6 paragraphText">
@@ -46,7 +47,7 @@ const AboutUs = () => {
         </div>
 
         {/* Our Mission Section */}
-        <div className="mt-16 bg-gradient-to-r from-black to-green-400 p-8 rounded-xl shadow-xl text-white">
+        <div className="mt-16 bg-gradient-to-r from-blue-400 to-green-300 p-8 rounded-xl shadow-xl text-white">
           <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-center ">
             Our Mission
           </h3>
@@ -60,7 +61,8 @@ const AboutUs = () => {
 
         {/* Our Values Section */}
         <div className="mt-16">
-          <h1 className="my-8 border-l-8 border-primary/50 py-2 pl-2 text-3xl font-bold">
+          <GradientBackground />
+          <h1 className="my-8 border-l-8 text-institution-dark border-primary/50 py-2 pl-2 text-3xl font-bold">
             Our Core Values
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -71,6 +73,7 @@ const AboutUs = () => {
                   <FaTrophy />
                 </i>
               </div>
+
               <h4 className="text-xl font-semibold text-gray-900 mb-4">
                 Excellence
               </h4>
@@ -169,7 +172,7 @@ const AboutUs = () => {
           <div className="text-center mt-12">
             <a
               href="#contact"
-              className="inline-block bg-primary text-white py-3 px-8 rounded-lg text-lg font-semibold hover:bg-secondary transition-colors duration-300"
+              className="inline-block bg-institution text-white py-3 px-8 rounded-lg text-lg font-semibold hover:bg-secondary transition-colors duration-300"
             >
               Get in Touch with Us
             </a>
