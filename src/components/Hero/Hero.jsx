@@ -19,7 +19,7 @@ export default function Example() {
   }, []);
 
   return (
-    <div className="relative h-[900px] w-full overflow-hidden">
+    <div className="relative md:h-screen lg:h-[900px] w-full overflow-hidden">
       {/* Background Slider */}
       <div className="absolute inset-0 z-0">
         {sliderImages.map((image, index) => (
