@@ -3,20 +3,20 @@ import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const FooterLinks = [
   {
-    title: "About",
+    title: "About Us",
     link: "/#about",
   },
   {
-    title: "Features",
-    link: "/#features",
+    title: "Our Services",
+    link: "/#services",
   },
   {
-    title: "Works",
-    link: "/#works",
+    title: "Careers",
+    link: "/#careers",
   },
   {
-    title: "Career",
-    link: "/#career",
+    title: "Contact Us",
+    link: "/#contact",
   },
 ];
 const HelpLinks = [
@@ -25,8 +25,8 @@ const HelpLinks = [
     link: "/#support",
   },
   {
-    title: "Delivery Details",
-    link: "/#delivery-details",
+    title: "Claims Process",
+    link: "/#claims-process",
   },
   {
     title: "Terms & Conditions",
@@ -34,20 +34,20 @@ const HelpLinks = [
   },
   {
     title: "Privacy Policy",
-    link: "/#policy",
+    link: "/#privacy-policy",
   },
 ];
 const ResourcesLinks = [
   {
-    title: "Free Ebooks",
-    link: "/#ebooks",
+    title: "Insurance Resources",
+    link: "/#resources",
   },
   {
-    title: "How To Blog",
-    link: "/#blogs",
+    title: "FAQ",
+    link: "/#faq",
   },
   {
-    title: "Subscribe TCJ",
+    title: "Subscribe to Newsletters",
     link: "https://www.youtube.com/channel/UC1H-a1MKEFXRiFlGNLcy7gQ?sub_confirmation=1",
   },
 ];
@@ -56,18 +56,19 @@ const Footer = () => {
     <div className="bg-dark text-white">
       <section className="container py-10">
         <div className=" grid md:grid-cols-3 py-5">
-          {/* company Details */}
+          {/* Company Details */}
           <div className=" py-8 px-4 ">
             <h1 className="sm:text-3xl text-xl font-bold sm:text-left text-justify mb-3 flex items-center gap-3">
-              Digital Agency
+              Equilibrium Insurance Broker
             </h1>
-            <p className="text-sm">
-              Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet
-              consectetur adipisicing elit consectetur adipisicing elit ipsum
-              dolor sit amet consectetur. adipisicing{" "}
+            <p className="text-sm cursor-pointer hover:translate-x-1 duration-300 space-x-1 text-gray-400">
+              At Equilibrium Insurance Broker, we offer tailored insurance
+              solutions to protect what matters most to you. Our team is
+              dedicated to helping you find the right coverage, offering peace
+              of mind and security.
             </p>
             <br />
-            {/* Social Handle */}
+            {/* Social Handles */}
             <div className="flex items-center gap-4 mt-6">
               <a href="#">
                 <FaInstagram className="text-2xl hover:text-primary duration-300" />
@@ -80,6 +81,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
+
           {/* Links */}
           <div className="grid grid-cols-2 sm:grid-cols-3 col-span-2 md:pl-10 ">
             <div className="">
@@ -99,6 +101,7 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
+
             <div className="">
               <div className="py-8 px-4 ">
                 <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
@@ -116,6 +119,7 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
+
             <div className="">
               <div className="py-8 px-4 ">
                 <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
@@ -134,7 +138,11 @@ const Footer = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div>{" "}
+        <p className="font-poppins font-normal text-center text-[18px] leading-[27px] text-white">
+          {new Date().getFullYear()} All Rights Reserved. {""} <br />
+          <span style={{ color: "skyblue" }}>EIB</span>.
+        </p>
       </section>
     </div>
   );

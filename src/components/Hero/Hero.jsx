@@ -19,7 +19,7 @@ export default function Example() {
   }, []);
 
   return (
-    <div className="relative md:h-screen lg:h-[900px] w-full overflow-hidden">
+    <div className="relative md:h-[850px] z-20 lg:h-[900px] w-full overflow-hidden">
       {/* Background Slider */}
       <div className="absolute inset-0 z-0">
         {sliderImages.map((image, index) => (
@@ -43,7 +43,7 @@ export default function Example() {
           <h1 className="text-5xl font-semibold tracking-tight sm:text-7xl">
             Secure Your Future with Equilibrium Insurance Broker Nig Ltd.
           </h1>
-          <p className="mt-8 text-lg font-medium sm:text-xl/8">
+          <p className="mt-5 text-lg font-medium sm:text-xl/8">
             At Equilibrium Insurance Broker Nig Ltd, we specialize in offering
             comprehensive and personalized insurance solutions. Whether it's for
             your health, property, or business, we've got you covered with

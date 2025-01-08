@@ -34,6 +34,14 @@ const AboutUs = () => {
               properties with flexible terms and conditions at negotiable rates
               for the best cover available.
             </p>
+            <div className="text-start mt-4">
+              <a
+                href="#contact"
+                className="inline-block bg-institution text-white py-3 px-8 rounded-lg text-lg font-semibold hover:bg-secondary transition-colors duration-300"
+              >
+                Read More
+              </a>
+            </div>
           </div>
 
           {/* Right Section: Image */}

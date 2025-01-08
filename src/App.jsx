@@ -12,6 +12,8 @@ import BlogsComp from "./components/Blogs/BlogsComp.jsx";
 import Footer from "./components/Footer/Footer";
 import AboutUs from "./components/About/AboutUs.jsx";
 import BusinessOutlook from "./components/BusinessOutlook/BusinessOutlook.jsx";
+import Cta from "./components/Cta/Cta.jsx";
+import Faq from "./components/Faq/Faq.jsx";
 
 const App = () => {
   useEffect(() => {
@@ -33,6 +35,8 @@ const App = () => {
       <Services />
       <BusinessOutlook />
       <Testimonial />
+      <Faq />
+      <Cta />
       {/* <BlogsComp /> */}
       <Footer />
     </div>
