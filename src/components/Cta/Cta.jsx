@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ctaImg from "../../assets/website/cta.jpg";
+import GradientBackground from "../GradientBackground";
 
 export default function Cta() {
   const [isImageLoaded, setIsImageLoaded] = useState(false);
@@ -10,7 +11,7 @@ export default function Cta() {
   };
 
   return (
-    <div className="dark:bg-gray-950 dark:text-white duration-300">
+    <div className="dark:bg-gray-950 dark:text-white duration-300 z-40">
       <div className="mx-auto max-w-7xl py-15 sm:px-6 sm:py-32 lg:px-8">
         <div className="relative isolate overflow-hidden bg-gray-900 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
           <svg
@@ -55,6 +56,7 @@ export default function Cta() {
           </div>
 
           {/* Image Section */}
+
           <div className="relative mt-16 h-100 lg:mt-8">
             {/* Skeleton Loader (Using Tailwind CSS) */}
             {!isImageLoaded && (

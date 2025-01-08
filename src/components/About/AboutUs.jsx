@@ -21,7 +21,7 @@ const AboutUs = () => {
             <h1 className="my-8 border-l-8  border-institution/50 py-2 pl-2 text-3xl font-bold">
               About Us
             </h1>
-            <p className="text-lg mb-6 paragraphText">
+            <p className="text-lg mb-6 text-gray-600 dark:text-gray-400">
               Equilibrium Insurance Broker (EIB) is a liability company
               incorporated on 18th July 2022, with an authorized share capital
               of N5 Million, as prescribed by the Insurance Act of 2003. The

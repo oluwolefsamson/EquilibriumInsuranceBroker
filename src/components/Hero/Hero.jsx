@@ -26,7 +26,7 @@ export default function Example() {
           <div
             key={index}
             className={`absolute inset-0 transition-opacity duration-1000 ${
-              currentSlide === index ? "opacity-30" : "opacity-0"
+              currentSlide === index ? "opacity-40" : "opacity-0"
             }`}
             style={{
               backgroundImage: `url(${image})`,
@@ -40,10 +40,10 @@ export default function Example() {
       {/* Content */}
       <div className="relative z-10 isolate px-6 pt-14 lg:px-8">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 text-center ">
-          <h1 className="text-5xl font-semibold tracking-tight sm:text-7xl">
+          <h1 className="text-5xl font-bold tracking-tight leading-relaxed sm:text-7xl">
             Secure Your Future with Equilibrium Insurance Broker Nig Ltd.
           </h1>
-          <p className="mt-5 text-lg font-medium sm:text-xl/8">
+          <p className="mt-5 text-lg font-inter font-semibold  sm:text-xl/8 text-gray-800 dark:text-gray-400">
             At Equilibrium Insurance Broker Nig Ltd, we specialize in offering
             comprehensive and personalized insurance solutions. Whether it's for
             your health, property, or business, we've got you covered with
@@ -52,7 +52,7 @@ export default function Example() {
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a
               href="#"
-              className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              className="rounded-md bg-institution px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
               Get started
             </a>

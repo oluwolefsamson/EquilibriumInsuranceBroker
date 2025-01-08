@@ -63,7 +63,7 @@ export default function Example() {
                   style={{ borderRadius: "50%" }}
                 />
               </div>
-              <p className="py-6 border-l-8 border-institution/50 pl-4">
+              <p className="py-6 border-l-8 border-institution/50 pl-4 text-gray-600 dark:text-gray-400">
                 We are dedicated to providing top-notch insurance solutions
                 tailored to meet diverse client needs. With a focus on
                 innovation, reliability, and customer satisfaction, our services
