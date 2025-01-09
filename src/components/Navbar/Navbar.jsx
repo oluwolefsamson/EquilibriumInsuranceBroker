@@ -29,20 +29,17 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:block">
           <ul className="flex items-center gap-8 md:gap-4">
-            {" "}
-            {/* Adjust gap for smaller screens */}
             {MenuLinks.map(({ id, name, link }) => (
               <li key={id}>
                 <a
                   href={link}
-                  className="text-lg font-medium hover:text-primary transition-colors duration-300 md:text-md"
+                  className="text-lg font-poppins font-normal tracking-wide hover:text-primary transition-colors duration-300 md:text-md font-sans" // Updated font styles
                 >
                   {name}
                 </a>
               </li>
             ))}
             <Link to="/contact">
-              {" "}
               <button className="primary-btn">Get in Touch</button>
             </Link>
             <DarkMode />

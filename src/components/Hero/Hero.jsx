@@ -39,14 +39,14 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 isolate px-6 pt-14 lg:px-8">
-        <div className="mx-auto max-w-2xl py-20 md:py-48 lg:py-56 text-center ">
-          <h1 className="text-5xl font-bold tracking-tight leading-none sm:text-7xl text-gray-100  dark:text-white">
+        <div className="mx-auto max-w-2xl py-20 md:py-48 lg:py-56 text-center">
+          <h1 className="text-5xl font-bold tracking-tight leading-none sm:text-7xl text-gray-100 dark:text-white">
             Secure Your Future with{" "}
-            <span className="text-green-300 dark:text-green-300 ">
+            <span className="text-green-300 dark:text-gradient">
               Equilibrium Insurance Broker Nig Ltd.
             </span>
           </h1>
-          <p className="mt-5 text-lg  font-semibold  sm:text-xl/8 text-gray-800 dark:text-gray-400">
+          <p className="mt-5 text-lg font-semibold sm:text-xl/8 text-gray-800 dark:text-gray-400">
             At Equilibrium Insurance Broker Nig Ltd, we specialize in offering
             comprehensive and personalized insurance solutions. Whether it's for
             your health, property, or business, we've got you covered with
@@ -66,7 +66,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Overlay */}
+      {/* Overlay (Only affects the background, not text) */}
       <div className="absolute inset-0 z-5 bg-black bg-opacity-30"></div>
     </div>
   );
