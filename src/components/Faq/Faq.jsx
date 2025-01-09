@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Accordion,
   AccordionItem,
@@ -13,16 +13,16 @@ import faqImg from "../../assets/website/faq.png";
 import GradientBackground from "../GradientBackground";
 
 const Faq = () => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   return (
     <div className="">
-      {" "}
       <GradientBackground />
-      <section className="w-full py-[100px] bg-gray-100 dark:bg-gray-950  dark:text-white  duration-300">
+      <section className="w-full py-[100px] bg-gray-100 dark:bg-gray-950 dark:text-white duration-300">
         <div className="flex flex-col md:flex-row items-center justify-around gap-6 max-w-screen-xl mx-auto px-6">
-          {/* Right Side - Change order on small screens */}
-
+          {/* Right Side - FAQ Accordion */}
           <div className="w-full md:w-1/2 flex flex-col items-start gap-4 order-1 sm:order-2">
-            <span className="text-2xl font-bold border-l-8  border-primary/50 pl-2 mb-4 text-blue-600  dark:text-white">
+            <span className="text-2xl font-bold border-l-8 border-primary/50 pl-2 mb-4 text-blue-600 dark:text-white">
               FAQ
             </span>
             <span className="text-pretty text-lg/8 text-gray-600 dark:text-gray-400">
@@ -41,7 +41,7 @@ const Faq = () => {
                   key={i}
                   uuid={i}
                   className="mb-5 border shadow-md"
-                  style={{ borderRadius: "10px" }} // Explicitly setting border radius
+                  style={{ borderRadius: "10px" }}
                 >
                   <AccordionItemHeading>
                     <AccordionItemButton className="flex items-center justify-between px-4 py-3 bg-white cursor-pointer rounded-lg">
@@ -65,13 +65,20 @@ const Faq = () => {
               ))}
             </Accordion>
           </div>
-          {/* Left Side - Change order on small screens */}
+
+          {/* Left Side - Image with Skeleton Loader */}
           <div className="w-full md:w-1/2 flex justify-center order-2 sm:order-1">
             <div className="w-full h-full overflow-hidden">
+              {!imageLoaded && (
+                <div className="w-full h-full bg-gray-300 dark:bg-gray-700 animate-pulse rounded-3xl"></div>
+              )}
               <img
                 src={faqImg}
                 alt="Hero"
-                className="w-full h-full object-cover rounded-3xl"
+                className={`w-full h-full object-cover rounded-3xl transition-opacity duration-300 ${
+                  imageLoaded ? "opacity-100" : "opacity-0"
+                }`}
+                onLoad={() => setImageLoaded(true)}
               />
             </div>
           </div>
