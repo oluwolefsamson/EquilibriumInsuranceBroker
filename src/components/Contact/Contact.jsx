@@ -12,7 +12,7 @@ const Contact = () => {
         {/* Left Side */}
         <div className="flex flex-col gap-6 w-full md:w-1/2">
           <div data-aos="fade-left">
-            <span className="text-2xl font-semibold text-primary">
+            <span className="text-2xl font-semibold text-institution">
               Easy to Contact us
             </span>
           </div>
