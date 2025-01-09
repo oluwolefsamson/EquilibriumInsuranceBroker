@@ -2,25 +2,27 @@ const people = [
   {
     name: "MR. SEYI ADEDIRAN",
     role: "Chairman",
-    imageUrl:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    imageUrl: "./seyi.png",
   },
   {
     name: "DR. SINI KWABE",
     role: "Executive Vice Chairman",
-    imageUrl:
-      "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    imageUrl: "./sini.png",
   },
   {
     name: "MR. YORKINA BARITORGE GIDEON",
     role: "Managing Director",
-    imageUrl:
-      "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    imageUrl: "./yorkina.png",
   },
   {
     name: "MR. SEUN OWAOLABI",
     role: "Director of Finance",
-    imageUrl: "",
+    imageUrl: "./owolabi.png",
+  },
+  {
+    name: "MISS PRISCILLA AGBA",
+    role: "Manager",
+    imageUrl: "./prisca.png",
   },
 ];
 
