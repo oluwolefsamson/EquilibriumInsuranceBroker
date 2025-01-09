@@ -22,7 +22,7 @@ const Faq = () => {
           {/* Right Side - Change order on small screens */}
 
           <div className="w-full md:w-1/2 flex flex-col items-start gap-4 order-1 sm:order-2">
-            <span className="text-2xl font-bold border-l-8  border-institution/50 pl-2 mb-4">
+            <span className="text-2xl font-bold border-l-8  border-primary/50 pl-2 mb-4 text-blue-600  dark:text-white">
               FAQ
             </span>
             <span className="text-pretty text-lg/8 text-gray-600 dark:text-gray-400">

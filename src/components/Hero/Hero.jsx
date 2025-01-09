@@ -8,7 +8,7 @@ import hero4 from "../../assets/website/hero4.jpg";
 
 const sliderImages = [hero1, hero2, hero4];
 
-export default function Example() {
+export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
@@ -39,11 +39,14 @@ export default function Example() {
 
       {/* Content */}
       <div className="relative z-10 isolate px-6 pt-14 lg:px-8">
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 text-center ">
-          <h1 className="text-5xl font-bold tracking-tight leading-relaxed sm:text-7xl">
-            Secure Your Future with Equilibrium Insurance Broker Nig Ltd.
+        <div className="mx-auto max-w-2xl py-20 md:py-48 lg:py-56 text-center ">
+          <h1 className="text-5xl font-bold tracking-tight leading-none sm:text-7xl text-gray-100  dark:text-white">
+            Secure Your Future with{" "}
+            <span className="text-green-300 dark:text-green-300 ">
+              Equilibrium Insurance Broker Nig Ltd.
+            </span>
           </h1>
-          <p className="mt-5 text-lg font-inter font-semibold  sm:text-xl/8 text-gray-800 dark:text-gray-400">
+          <p className="mt-5 text-lg  font-semibold  sm:text-xl/8 text-gray-800 dark:text-gray-400">
             At Equilibrium Insurance Broker Nig Ltd, we specialize in offering
             comprehensive and personalized insurance solutions. Whether it's for
             your health, property, or business, we've got you covered with

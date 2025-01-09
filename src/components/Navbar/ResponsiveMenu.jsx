@@ -1,7 +1,7 @@
 import React from "react";
 import { FaUserCircle } from "react-icons/fa";
 import { MenuLinks } from "./Navbar";
-
+import { Link } from "react-router-dom";
 const ResponsiveMenu = ({ showMenu }) => {
   return (
     <div
@@ -32,6 +32,10 @@ const ResponsiveMenu = ({ showMenu }) => {
             </li>
           ))}
         </ul>
+        <Link to="/contact">
+          {" "}
+          <button className="primary-btn">Get in Touch</button>
+        </Link>
       </nav>
 
       {/* Footer Section */}

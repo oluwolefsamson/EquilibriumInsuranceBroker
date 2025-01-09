@@ -16,7 +16,10 @@ export default function Example() {
       {/* Header */}
 
       <div className="pb-12 text-center space-y-3">
-        <h1 data-aos="fade-up" className="text-3xl font-semibold sm:text-3xl">
+        <h1
+          data-aos="fade-up"
+          className="text-3xl font-semibold sm:text-3xl text-blue-600  dark:text-white"
+        >
           Our Business Outlook
         </h1>
         <p
@@ -62,15 +65,27 @@ export default function Example() {
                   }`}
                   style={{ borderRadius: "50%" }}
                 />
+              </div>{" "}
+              <div className="border-l-8 border-institution/50 pl-4">
+                {" "}
+                <p className="py-4  text-gray-600 dark:text-gray-400">
+                  We are dedicated to providing top-notch insurance solutions
+                  tailored to meet diverse client needs. With a focus on
+                  innovation, reliability, and customer satisfaction, our
+                  services span risk management, claim administration, retail
+                  marketing, and comprehensive insurance products. Our
+                  commitment is to empower clients with secure and seamless
+                  insurance experiences.
+                </p>{" "}
+                <div className="text-start mt-4">
+                  <a
+                    href="#contact"
+                    className="inline-block bg-institution text-white py-3 px-8 rounded-lg text-lg font-semibold hover:bg-secondary transition-colors duration-300"
+                  >
+                    Read More
+                  </a>
+                </div>
               </div>
-              <p className="py-6 border-l-8 border-institution/50 pl-4 text-gray-600 dark:text-gray-400">
-                We are dedicated to providing top-notch insurance solutions
-                tailored to meet diverse client needs. With a focus on
-                innovation, reliability, and customer satisfaction, our services
-                span risk management, claim administration, retail marketing,
-                and comprehensive insurance products. Our commitment is to
-                empower clients with secure and seamless insurance experiences.
-              </p>
             </div>
           </div>
         </div>

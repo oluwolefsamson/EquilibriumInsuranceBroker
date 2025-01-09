@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import { HiMenuAlt3, HiMenuAlt1 } from "react-icons/hi";
 import ResponsiveMenu from "./ResponsiveMenu";
-
+import { Link } from "react-router-dom";
 import DarkMode from "./DarkMode";
 import DesignedLogo from "../DesinedLogo";
 
 export const MenuLinks = [
   { id: 1, name: "Home", link: "/" },
-  { id: 2, name: "About", link: "/#about" },
-  { id: 3, name: "Services", link: "/#services" },
-  { id: 4, name: "Projects", link: "/#projects" },
-  { id: 5, name: "Brochure", link: "/#services" },
+  { id: 2, name: "About", link: "/about" },
+  { id: 3, name: "Services", link: "/service" },
+  { id: 4, name: "Projects", link: "/projects" },
+  { id: 5, name: "Brochure", link: "/brochure" },
 ];
 
 const Navbar = () => {
@@ -41,7 +41,10 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
-            <button className="primary-btn">Get in Touch</button>
+            <Link to="/contact">
+              {" "}
+              <button className="primary-btn">Get in Touch</button>
+            </Link>
             <DarkMode />
           </ul>
         </nav>

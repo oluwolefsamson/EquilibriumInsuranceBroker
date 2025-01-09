@@ -1,45 +1,31 @@
 import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// Component import
+// Component imports
 import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Hero/Hero";
-import BrandsLogo from "./components/BrandsLogo/BrandsLogo.jsx";
-import Services from "./components/Services/Services";
-import Testimonial from "./components/Testimonial/Testimonial";
-import BlogsComp from "./components/Blogs/BlogsComp.jsx";
 import Footer from "./components/Footer/Footer";
-import AboutUs from "./components/About/AboutUs.jsx";
-import BusinessOutlook from "./components/BusinessOutlook/BusinessOutlook.jsx";
-import Cta from "./components/Cta/Cta.jsx";
-import Faq from "./components/Faq/Faq.jsx";
+import Homepage from "./Pages/Homepage";
+import Aboutpage from "./Pages/Aboutpage";
+import Contactpage from "./Pages/Contactpage";
+import Brochurepage from "./Pages/Brochurepage";
+import Servicepage from "./Pages/Servicepage";
 
 const App = () => {
-  useEffect(() => {
-    AOS.init({
-      offset: 100,
-      duration: 800,
-      easing: "ease-in",
-      delay: 100,
-    });
-    AOS.refresh();
-  }, []);
-
   return (
-    <div className="bg-white dark:bg-black dark:text-white text-black overflow-x-hidden">
-      <Navbar />
-      <Hero />
-      <BrandsLogo />
-      <AboutUs />
-      <Services />
-      <BusinessOutlook />
-      <Testimonial />
-      <Faq />
-      <Cta />
-      {/* <BlogsComp /> */}
-      <Footer />
-    </div>
+    <Router>
+      <div className="bg-white dark:bg-black dark:text-white text-black overflow-x-hidden">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/about" element={<Aboutpage />} />
+          <Route path="/contact" element={<Contactpage />} />
+          <Route path="/brochure" element={<Brochurepage />} />
+          <Route path="/service" element={<Servicepage />} />
+          <Route path="*" element={<Homepage />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 };
 

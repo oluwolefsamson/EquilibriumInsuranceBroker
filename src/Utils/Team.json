@@ -1,0 +1,42 @@
+[
+  {
+    "name": "DR. SINI KWABE",
+    "position": "Chairman",
+    "detail": "Dr. Sini Kwabe, Chairman of a leading real estate company, is a visionary and a Ph.D holder. He's known for innovative projects and mentors young professionals while collecting vintage architectural models in his free time.",
+    "image": "./sini.png"
+  },
+  {
+    "name": "MR SEYI ADEDIRAN",
+    "position": "Group Chief Executive (GCE)",
+    "detail": "The Group Chief Executive (GCE) of Equilibrium Metro Homes was previously employed at Oxford Holding. Prior to that, he served as the Deputy Managing Director and Acting Managing Director of Alliance & General Insurance Plc. He was also an Executive Director of Sales and Marketing approved by NAICOM (National Insurance Commission).",
+    "image": "./seyi.png"
+  },
+
+  {
+    "name": "ARC. NUREINI TEMITOPE",
+    "position": "Director of Projects",
+    "detail": "Mr Nureni is known for his self-motivation, goal orientation, organizational skills, and efficiency. He holds a B.Sc. in Architecture and an M.Arch. From Obafemi Awolowo University, Ile-Ife, and an M.Sc. in Construction Management from the University of Lagos, Akoka. With 17 years of experience.",
+    "image": "./nureini.png"
+  },
+
+  {
+    "name": "MR SEUN OWOLABI",
+    "position": "Director of Finance",
+    "detail": "MR Owolabi Oluwaseun holds a B.Sc. Degree in Accounting at the University of Lagos, MSc finance with distinction at Caleb University and a fellow member of the Institute of Chartered Accountants of Nigeria. He is also an associate member of Chartered Insurance Institute of Nigeria and currently undergoing his PhD program.",
+    "image": "./owolabi.png"
+  },
+
+  {
+    "name": "SURV. OHIKHUEME ANTHONY",
+    "position": "Company Surveyor",
+    "detail": "Surv. Ohikhueme Anthony Ikhide MNIS is a Land Surveying (now Geomatics) graduate of the prestigious Ahmadu Bello University, Zaria. He has experience spanning close to two decades in the areas of Construction, Surveying, Land Development, Management and Administration, and Geographic Information Systems (GIS). ",
+    "image": "./anthony.png"
+  },
+
+  {
+    "name": "MISS PRISCILLA AGBA",
+    "position": "Manager",
+    "detail": "Miss Priscilla Agba is a dedicated real estate manager with a talent for identifying prime investment opportunities and delivering top-notch client service. Her office is adorned with architectural models, reflecting her passion for the industry.",
+    "image": "./prisca.png"
+  }
+]
