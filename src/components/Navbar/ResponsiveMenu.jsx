@@ -2,7 +2,12 @@ import React from "react";
 import { FaUserCircle } from "react-icons/fa";
 import { MenuLinks } from "./Navbar";
 import { Link } from "react-router-dom";
-const ResponsiveMenu = ({ showMenu }) => {
+
+const ResponsiveMenu = ({ showMenu, setShowMenu }) => {
+  const handleCloseMenu = () => {
+    setShowMenu(false); // Closes the sidebar
+  };
+
   return (
     <div
       className={`${
@@ -23,27 +28,26 @@ const ResponsiveMenu = ({ showMenu }) => {
         <ul className="space-y-4 text-xl">
           {MenuLinks.map((data) => (
             <li key={data.name}>
-              <a
-                href={data.link}
+              <Link
+                to={data.link}
                 className="mb-5 inline-block hover:text-primary"
+                onClick={handleCloseMenu} // Close the menu when navigating
               >
                 {data.name}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
-        <Link to="/contact">
-          {" "}
+        <Link to="/contact" onClick={handleCloseMenu}>
           <button className="primary-btn">Contact</button>
         </Link>
       </nav>
 
       {/* Footer Section */}
-      {/* <div className="footer mt-auto">
-        <h1>
-          Made with ❤ by <a href="https://dilshad-ahmed.github.io/">Dilshad</a>
-        </h1>
-      </div> */}
+      <div className="footer mt-auto">
+        {new Date().getFullYear()} All Rights Reserved. <br />
+        <span style={{ color: "skyblue" }}>EIB</span>.
+      </div>
     </div>
   );
 };
