@@ -34,8 +34,11 @@ const Contactpage = () => {
         </div>
       ) : (
         <>
-          <Contact />
-          <ContactForm />
+          <div className="py-11">
+            {" "}
+            <Contact />
+            <ContactForm />
+          </div>
         </>
       )}
     </div>

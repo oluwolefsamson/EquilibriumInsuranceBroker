@@ -8,7 +8,7 @@ export default function ContactForm() {
   const [agreed, setAgreed] = useState(false);
 
   return (
-    <div className="isolate dark:bg-gray-900 text-gray-900 dark:text-white px-6 lg:py-24 sm:py-32 lg:px-8">
+    <div className="isolate dark:bg-gray-900 text-gray-900 dark:text-white px-6 py-20 sm:py-32 lg:px-8">
       <div
         aria-hidden="true"
         className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"

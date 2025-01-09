@@ -1,18 +1,28 @@
 const people = [
   {
-    name: "Leslie Alexander",
-    role: "Co-Founder / CEO",
+    name: "MR. SEYI ADEDIRAN",
+    role: "Chairman",
     imageUrl:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   },
-
   {
-    name: "Leslie Alexander",
-    role: "Co-Founder / CEO",
+    name: "DR. SINI KWABE",
+    role: "Executive Vice Chairman",
     imageUrl:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   },
-  // More people...
+  {
+    name: "MR. YORKINA BARITORGE GIDEON",
+    role: "Managing Director",
+    imageUrl:
+      "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+  },
+  {
+    name: "MR. SEUN OWAOLABI",
+    role: "Director of Finance",
+    imageUrl:
+      "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+  },
 ];
 
 export default function Team() {
@@ -21,11 +31,13 @@ export default function Team() {
       <div className="mx-auto grid max-w-7xl gap-20 px-6 lg:px-8 xl:grid-cols-3">
         <div className="max-w-xl">
           <h2 className="text-pretty text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
-            Meet our leadership
+            Meet Our Leadership Team
           </h2>
-          <p className="mt-6 text-lg/8 text-gray-600">
-            We’re a dynamic group of individuals who are passionate about what
-            we do and dedicated to delivering the best results for our clients.
+          <p className="mt-6 text-lg text-gray-600">
+            At Equilibrium Insurance Broker Nig Ltd, our leadership team is
+            committed to providing top-notch insurance solutions, driven by a
+            passion for excellence and a dedication to ensuring your peace of
+            mind.
           </p>
         </div>
         <ul
@@ -36,15 +48,15 @@ export default function Team() {
             <li key={person.name}>
               <div className="flex items-center gap-x-6">
                 <img
-                  alt=""
+                  alt={`${person.name}`}
                   src={person.imageUrl}
-                  className="size-16 rounded-full"
+                  className="h-16 w-16 rounded-full"
                 />
                 <div>
-                  <h3 className="text-base/7 font-semibold tracking-tight text-gray-900">
+                  <h3 className="text-base font-semibold tracking-tight text-gray-900">
                     {person.name}
                   </h3>
-                  <p className="text-sm/6 font-semibold text-indigo-600">
+                  <p className="text-sm font-semibold text-indigo-600">
                     {person.role}
                   </p>
                 </div>

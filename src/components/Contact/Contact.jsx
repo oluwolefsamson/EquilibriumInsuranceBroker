@@ -3,7 +3,7 @@ import { MdCall } from "react-icons/md";
 import { BsInstagram } from "react-icons/bs";
 import { FaWhatsapp } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
-import hero2 from "../../assets/website/hero2.jpg";
+import contactImg from "../../assets/website/contactImg.jpg";
 
 const Contact = () => {
   return (
@@ -74,7 +74,7 @@ const Contact = () => {
                     </span>
                   </div>
                 </div>
-                <a href="https://www.instagram.com/equilibriummetrohomes/">
+                <a href="https://www.instagram.com/equilibriuminsurancebroker/">
                   <button className="w-full  text-green-600 py-2 font-semibold hover:bg-green-600 hover:text-white transition-all">
                     Send Message
                   </button>
@@ -92,7 +92,7 @@ const Contact = () => {
                     </span>
                   </div>
                 </div>
-                <a href="mailto:equilibriummetrohomes@gmail.com">
+                <a href="mailto:equilibriuminsurancebroker@gmail.com">
                   <button className="w-full bg-lightBlue text-green-600 py-2 font-semibold hover:bg-green-600 hover:text-white transition-all">
                     Send Mail
                   </button>
@@ -110,9 +110,9 @@ const Contact = () => {
         >
           <div className="relative w-full h-full">
             <img
-              src={hero2}
+              src={contactImg}
               alt="Contact"
-              className="w-full h-full object-cover rounded-md"
+              className="w-full h-[500px] object-cover rounded-md"
             />
           </div>
         </div>

@@ -34,16 +34,16 @@ const ResponsiveMenu = ({ showMenu }) => {
         </ul>
         <Link to="/contact">
           {" "}
-          <button className="primary-btn">Get in Touch</button>
+          <button className="primary-btn">Contact</button>
         </Link>
       </nav>
 
       {/* Footer Section */}
-      <div className="footer mt-auto">
+      {/* <div className="footer mt-auto">
         <h1>
           Made with ❤ by <a href="https://dilshad-ahmed.github.io/">Dilshad</a>
         </h1>
-      </div>
+      </div> */}
     </div>
   );
 };

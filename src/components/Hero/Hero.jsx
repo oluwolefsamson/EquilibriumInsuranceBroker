@@ -3,10 +3,15 @@
 import { useState, useEffect } from "react";
 import hero1 from "../../assets/website/hero1.jpg";
 import hero2 from "../../assets/website/hero2.jpg";
-import hero3 from "../../assets/website/hero3.jpg";
 import hero4 from "../../assets/website/hero4.jpg";
 
-const sliderImages = [hero1, hero2, hero4];
+// Add black as a color option to the sliderImages array
+const sliderImages = [
+  { type: "image", src: hero1 },
+  { type: "image", src: hero2 },
+  { type: "image", src: hero4 },
+  { type: "color", color: "black" }, // Add black as a background
+];
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -22,16 +27,19 @@ export default function Hero() {
     <div className="relative md:h-[850px] z-20 lg:h-[900px] w-full overflow-hidden">
       {/* Background Slider */}
       <div className="absolute inset-0 z-0">
-        {sliderImages.map((image, index) => (
+        {sliderImages.map((slide, index) => (
           <div
             key={index}
             className={`absolute inset-0 transition-opacity duration-1000 ${
               currentSlide === index ? "opacity-40" : "opacity-0"
             }`}
             style={{
-              backgroundImage: `url(${image})`,
+              background:
+                slide.type === "image" ? `url(${slide.src})` : slide.color, // Use color for black slide
               backgroundSize: "cover",
               backgroundPosition: "center",
+              height: "100%", // Ensure the image fills the container
+              width: "100%", // Ensure the image spans the entire width
             }}
           ></div>
         ))}

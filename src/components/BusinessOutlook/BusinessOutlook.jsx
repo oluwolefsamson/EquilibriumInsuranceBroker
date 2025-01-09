@@ -74,14 +74,12 @@ export default function Example() {
                   tailored to meet diverse client needs. With a focus on
                   innovation, reliability, and customer satisfaction, our
                   services span risk management, claim administration, retail
-                  marketing, and comprehensive insurance products. Our
-                  commitment is to empower clients with secure and seamless
-                  insurance experiences.
+                  marketing, and comprehensive insurance products.
                 </p>{" "}
-                <div className="text-start mt-4">
+                <div className="text-start ">
                   <a
                     href="#contact"
-                    className="inline-block bg-institution text-white py-3 px-8 rounded-lg text-lg font-semibold hover:bg-secondary transition-colors duration-300"
+                    className="inline-block bg-institution text-white py-2 px-4 rounded-md text-lg font-semibold hover:bg-secondary transition-colors duration-300"
                   >
                     Read More
                   </a>

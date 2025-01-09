@@ -21,7 +21,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="sticky top-0 bg-white dark:bg-gray-950 dark:text-white z-50 shadow-md">
+    <div className="sticky top-0 bg-white dark:bg-gray-950 dark:text-white z-50 ">
       <div className="container mx-auto py-4 px-6 flex justify-between items-center">
         {/* Logo Section */}
         <DesignedLogo />
@@ -33,14 +33,14 @@ const Navbar = () => {
               <li key={id}>
                 <a
                   href={link}
-                  className="text-lg font-poppins font-normal tracking-wide hover:text-primary transition-colors duration-300 md:text-md font-sans" // Updated font styles
+                  className="text-lg font-poppins font-normal tracking-wide  transition-colors duration-300 md:text-md font-sans" // Updated font styles
                 >
                   {name}
                 </a>
               </li>
             ))}
             <Link to="/contact">
-              <button className="primary-btn">Get in Touch</button>
+              <button className="primary-btn">Contact</button>
             </Link>
             <DarkMode />
           </ul>
