@@ -7,7 +7,7 @@ import hero2 from "../../assets/website/hero2.jpg";
 
 const Contact = () => {
   return (
-    <section className="w-full p-8 flex flex-col items-center justify-center">
+    <section className="w-full p-8 lg:py-[120px] flex flex-col items-center justify-center ">
       <div className="flex flex-wrap items-center justify-between w-full max-w-screen-xl px-6">
         {/* Left Side */}
         <div className="flex flex-col gap-6 w-full md:w-1/2">
@@ -16,7 +16,7 @@ const Contact = () => {
               Easy to Contact us
             </span>
           </div>
-          <span className="text-lg text-gray-600">
+          <span className="text-lg text-gray-600 dark:text-white">
             We are always ready to help by providing the best services for you.
             We believe a good place to live can make your life better.
           </span>
@@ -26,15 +26,17 @@ const Contact = () => {
             <div className="flex flex-wrap gap-6 w-full sm:w-1/2 md:w-full">
               <div className="flex flex-col items-center bg-white p-4 border border-gray-300 rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-lg w-full sm:w-1/2 md:w-auto">
                 <div className="flex items-center gap-4">
-                  <div className="flex justify-center items-center bg-lightBlue rounded-full p-2">
-                    <MdCall size={25} />
+                  <div className="flex justify-center items-center  bg-lightBlue rounded-full p-2">
+                    <MdCall size={25} color="green" />
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-lg font-semibold">Call</span>
+                    <span className="text-lg font-semibold dark:text-gray-700">
+                      Call
+                    </span>
                   </div>
                 </div>
                 <a href="">
-                  <button className="w-full bg-lightBlue text-blue-600 py-2 font-semibold hover:bg-blue-600 hover:text-white transition-all">
+                  <button className="w-full bg-lightBlue text-green-600 py-2 font-semibold hover:bg-green-600 hover:text-white transition-all">
                     Call Now
                   </button>
                 </a>
@@ -43,14 +45,16 @@ const Contact = () => {
               <div className="flex flex-col items-center bg-white p-4 border border-gray-300 rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-lg w-full sm:w-1/2 md:w-auto">
                 <div className="flex items-center gap-4">
                   <div className="flex justify-center items-center bg-lightBlue rounded-full p-2">
-                    <FaWhatsapp size={25} />
+                    <FaWhatsapp size={25} color="green" />
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-lg font-semibold">Whatsapp</span>
+                    <span className="text-lg font-semibold dark:text-gray-700">
+                      Whatsapp
+                    </span>
                   </div>
                 </div>
                 <a href="https://wa.link/xdcypy">
-                  <button className="w-full bg-lightBlue text-blue-600 py-2 font-semibold hover:bg-blue-600 hover:text-white transition-all">
+                  <button className="w-full bg-lightBlue text--600 greenpy-2 text-green-600 font-semibold hover:bg-green-600 hover:text-white transition-all">
                     Chat Now
                   </button>
                 </a>
@@ -62,14 +66,16 @@ const Contact = () => {
               <div className="flex flex-col items-center bg-white p-4 border border-gray-300 rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-lg w-full sm:w-1/2 md:w-auto">
                 <div className="flex items-center gap-4">
                   <div className="flex justify-center items-center bg-lightBlue rounded-full p-2">
-                    <BsInstagram size={25} />
+                    <BsInstagram size={25} color="green" />
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-lg font-semibold">Instagram</span>
+                    <span className="text-lg font-semibold dark:text-gray-700">
+                      Instagram
+                    </span>
                   </div>
                 </div>
                 <a href="https://www.instagram.com/equilibriummetrohomes/">
-                  <button className="w-full bg-lightBlue text-blue-600 py-2 font-semibold hover:bg-blue-600 hover:text-white transition-all">
+                  <button className="w-full  text-green-600 py-2 font-semibold hover:bg-green-600 hover:text-white transition-all">
                     Send Message
                   </button>
                 </a>
@@ -78,14 +84,16 @@ const Contact = () => {
               <div className="flex flex-col items-center bg-white p-4 border border-gray-300 rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-lg w-full sm:w-1/2 md:w-auto">
                 <div className="flex items-center gap-4">
                   <div className="flex justify-center items-center bg-lightBlue rounded-full p-2">
-                    <BiLogoGmail size={25} />
+                    <BiLogoGmail size={25} color="green" />
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-lg font-semibold">Gmail</span>
+                    <span className="text-lg font-semibold dark:text-gray-700">
+                      Gmail
+                    </span>
                   </div>
                 </div>
                 <a href="mailto:equilibriummetrohomes@gmail.com">
-                  <button className="w-full bg-lightBlue text-blue-600 py-2 font-semibold hover:bg-blue-600 hover:text-white transition-all">
+                  <button className="w-full bg-lightBlue text-green-600 py-2 font-semibold hover:bg-green-600 hover:text-white transition-all">
                     Send Mail
                   </button>
                 </a>
