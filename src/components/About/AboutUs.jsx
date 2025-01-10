@@ -28,12 +28,6 @@ const AboutUs = () => {
               professional indemnity of N10 Million is in place to protect the
               liability of the firm and the interest of clients against loss or
               damage that may arise.
-              {/* We are a first-class brokerage firm that
-              ensures qualitative and efficient service to our clients by taking
-              care of their insurance risks and providing tailor-made insurance
-              policies to cover individuals, organizations, and personal
-              properties with flexible terms and conditions at negotiable rates
-              for the best cover available. */}
             </p>
             <div className="text-start mt-4">
               <a

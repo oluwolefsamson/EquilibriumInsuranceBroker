@@ -1,15 +1,22 @@
 [
   {
-    "name": "DR. SINI KWABE",
+    "name": "MR SEYI ADEDIRAN  ",
     "position": "Chairman",
-    "detail": "Dr. Sini Kwabe, Chairman of a leading real estate company, is a visionary and a Ph.D holder. He's known for innovative projects and mentors young professionals while collecting vintage architectural models in his free time.",
-    "image": "./sini.png"
+    "detail": " The Chairman of Equilibrium Insurance Broker was previously employed at Oxford Holding. Prior to that, he served as the Deputy Managing Director and Acting Managing Director of Alliance & General Insurance Plc. He was also an Executive Director of Sales and Marketing approved by NAICOM (National Insurance Commission).",
+    "image": "./seyi.png"
   },
   {
-    "name": "MR SEYI ADEDIRAN",
+    "name": " DR. SINI KWABE",
     "position": "Group Chief Executive (GCE)",
-    "detail": "The Group Chief Executive (GCE) of Equilibrium Metro Homes was previously employed at Oxford Holding. Prior to that, he served as the Deputy Managing Director and Acting Managing Director of Alliance & General Insurance Plc. He was also an Executive Director of Sales and Marketing approved by NAICOM (National Insurance Commission).",
-    "image": "./seyi.png"
+    "detail": "Dr. Sini Kwabe, The Executive Vice Chairman of a leading insurance company, is a visionary and a Ph.D holder. He's known for innovative projects and mentors young professionals while collecting vintage architectural models in his free time.  ",
+    "image": "./sini.png"
+  },
+
+  {
+    "name": "MR. YORKINA BARITORGE GIDEON",
+    "position": "Managing Director",
+    "detail": "Dr. Sini Kwabe, Chairman of a leading real estate company, is a visionary and a Ph.D holder. He's known for innovative projects and mentors young professionals while collecting vintage architectural models in his free time.  ",
+    "image": "./yorkina.png"
   },
 
   {
