@@ -14,15 +14,6 @@ const ResponsiveMenu = ({ showMenu, setShowMenu }) => {
         showMenu ? "translate-x-0" : "-translate-x-full"
       } fixed top-0 left-0 z-20 flex h-screen w-[75%] flex-col justify-between bg-white dark:bg-gray-900 dark:text-white px-8 pb-6 pt-16 text-black transition-transform duration-300 md:hidden rounded-r-xl shadow-md`}
     >
-      {/* User Profile Section */}
-      <div className="flex items-center justify-start gap-3">
-        <FaUserCircle size={50} />
-        <div>
-          <h1>Hello User</h1>
-          <h1 className="text-sm text-slate-500">Premium user</h1>
-        </div>
-      </div>
-
       {/* Navigation Links */}
       <nav className="mt-12">
         <ul className="space-y-4 text-xl">
@@ -30,7 +21,7 @@ const ResponsiveMenu = ({ showMenu, setShowMenu }) => {
             <li key={data.name}>
               <Link
                 to={data.link}
-                className="mb-5 inline-block hover:text-primary"
+                className="mb-5 inline-block "
                 onClick={handleCloseMenu} // Close the menu when navigating
               >
                 {data.name}
