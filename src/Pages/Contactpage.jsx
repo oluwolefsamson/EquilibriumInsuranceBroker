@@ -9,7 +9,7 @@ import ContactForm from "../components/ContactForm/ContactForm";
 
 const Contactpage = () => {
   return (
-    <div className="py-[20px]">
+    <div>
       <Contact />
       <ContactForm />
     </div>

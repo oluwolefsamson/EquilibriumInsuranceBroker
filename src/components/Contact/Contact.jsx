@@ -112,7 +112,7 @@ const Contact = () => {
             <img
               src={contactImg}
               alt="Contact"
-              className="w-full h-[500px] object-cover rounded-md"
+              className="w-full lg:h-[500px] md:h-[800px] sm:h-[200px] object-cover rounded-md"
             />
           </div>
         </div>

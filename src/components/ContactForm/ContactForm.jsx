@@ -8,7 +8,7 @@ export default function ContactForm() {
   const [agreed, setAgreed] = useState(false);
 
   return (
-    <div className="isolate dark:bg-gray-900 text-gray-900 dark:text-white px-6 lg:py-[15px] py-[50px]  lg:px-8">
+    <div className="isolate dark:bg-gray-900 text-gray-900 dark:text-white px-6 lg:py-[35px] py-[50px]  lg:px-8">
       <div
         aria-hidden="true"
         className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
@@ -119,9 +119,8 @@ export default function ContactForm() {
                     aria-label="Country"
                     className="col-start-1 row-start-1 w-full appearance-none rounded-md py-2 pl-3.5 pr-7 text-base dark:text-black placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-green-600 sm:text-sm/6"
                   >
+                    <option>NG</option>
                     <option>US</option>
-                    <option>CA</option>
-                    <option>EU</option>
                   </select>
                   <ChevronDownIcon
                     color="black"
