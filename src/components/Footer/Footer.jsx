@@ -48,7 +48,7 @@ const ResourcesLinks = [
   },
   {
     title: "Subscribe to Newsletters",
-    link: "https://www.youtube.com/channel/UC1H-a1MKEFXRiFlGNLcy7gQ?sub_confirmation=1",
+    link: "",
   },
 ];
 

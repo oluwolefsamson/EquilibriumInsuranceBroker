@@ -1,23 +1,41 @@
 import React from "react";
-import Brand1 from "../../assets/brands/1.svg";
-import Brand2 from "../../assets/brands/2.svg";
-import Brand3 from "../../assets/brands/3.svg";
-import Brand4 from "../../assets/brands/4.svg";
-import Brand5 from "../../assets/brands/5.svg";
+import Brand1 from "../../assets/brands/1.png";
+import Brand2 from "../../assets/brands/2.png";
+import Brand3 from "../../assets/brands/3.png";
+import Brand4 from "../../assets/brands/4.jpg";
+import Brand5 from "../../assets/brands/5.png";
 
 const BrandsLogo = () => {
   return (
-    <>
-      <div className="container mb-12 mt-12 sm:mt-0">
-        <div className="py-6 md:px-32 flex flex-wrap items-center justify-evenly gap-3">
-          <img src={Brand1} alt="" />
-          <img src={Brand2} alt="" />
-          <img src={Brand3} alt="" />
-          <img src={Brand4} alt="" />
-          <img src={Brand5} alt="" />
-        </div>
+    <div className="container mb-8 mt-8 sm:mt-0">
+      <div className="py-3 md:px-32 flex flex-wrap items-center justify-evenly gap-6">
+        <img
+          src={Brand1}
+          alt="Brand 1"
+          className="lg:w-[100px] md:w-[80px] sm:w-[60px] w-[50px]" // Improved width for responsiveness
+        />
+        <img
+          src={Brand4}
+          alt="Brand 4"
+          className="lg:w-[100px] lg:h-[50px] md:w-[80px] sm:w-[60px] w-[50px]"
+        />
+        <img
+          src={Brand2}
+          alt="Brand 2"
+          className="lg:w-[100px] md:w-[80px] sm:w-[60px] w-[50px]"
+        />
+        <img
+          src={Brand5}
+          alt="Brand 5"
+          className="lg:w-[100px] md:w-[80px] sm:w-[60px] w-[50px]"
+        />
+        <img
+          src={Brand3}
+          alt="Brand 3"
+          className="lg:w-[100px] md:w-[80px] sm:w-[50px] w-[40px]"
+        />
       </div>
-    </>
+    </div>
   );
 };
 

@@ -8,8 +8,7 @@ import DesignedLogo from "../DesinedLogo";
 export const MenuLinks = [
   { id: 1, name: "Home", link: "/" },
   { id: 2, name: "About", link: "/about" },
-  { id: 3, name: "Services", link: "/service" },
-  { id: 4, name: "Projects", link: "/projects" },
+  { id: 3, name: "Services", link: "/services" },
   { id: 5, name: "Brochure", link: "/brochure" },
 ];
 

@@ -12,7 +12,7 @@ const AboutUs = () => {
   return (
     <section
       id="about"
-      className="py-20 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white"
+      className="py-10 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white"
     >
       <div className="container px-4 mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-12">
@@ -31,7 +31,7 @@ const AboutUs = () => {
             </p>
             <div className="text-start mt-4">
               <a
-                href="#contact"
+                href="/contact"
                 className="inline-block bg-institution text-white py-2 px-5 rounded-lg text-md font-semibold hover:bg-secondary transition-colors duration-300"
               >
                 Read More
@@ -57,8 +57,8 @@ const AboutUs = () => {
           <p className="text-lg text-center mb-6 text-white">
             Our mission is to provide unparalleled insurance solutions that meet
             the diverse needs of our clients. We strive to offer services that
-            are transparent, accessible, and reliable, ensuring that every
-            customer’s needs are met with professionalism and care.
+            are transparent, accessible, and reliable, ensuring that every The
+            customer&apos;s needs are met with professionalism and care.
           </p>
         </div>
 
@@ -174,7 +174,7 @@ const AboutUs = () => {
           </p>
           <div className="text-center mt-12">
             <a
-              href="#contact"
+              href="/contact"
               className="inline-block bg-institution text-white py-3 px-8 rounded-lg text-lg font-semibold hover:bg-secondary transition-colors duration-300"
             >
               Get in Touch with Us

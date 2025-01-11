@@ -15,7 +15,7 @@ export default function Example() {
     <div className="relative isolate overflow-hidden dark:bg-gray-950 dark:text-white duration-300 px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
       {/* Header */}
 
-      <div className="pb-12 text-center space-y-3">
+      <div className="pb-8 text-center space-y-3">
         <h1
           data-aos="fade-up"
           className="text-3xl font-semibold sm:text-3xl text-blue-600  dark:text-white"
@@ -31,10 +31,10 @@ export default function Example() {
         </p>
       </div>
 
-      <div className="absolute inset-0 -z-10 overflow-hidden"></div>
-      <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 lg:gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start ">
+      <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 lg:gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-center ">
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8"></div>
-        <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
+
+        <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden flex justify-center">
           {/* Skeleton Loader for Image 1 */}
           {!isImageLoaded1 && (
             <div className="w-[48rem] sm:w-[57rem] h-[auto] bg-gray-200 animate-pulse rounded-md shadow-xl ring-1 ring-gray-400/10"></div>
@@ -43,13 +43,13 @@ export default function Example() {
             alt=""
             src={outlook2}
             onLoad={handleImageLoad1}
-            className={`w-[48rem] sm:w-[57rem] bg-gray-900 shadow-xl ring-1 ring-gray-400/10 transition-opacity duration-500 ${
+            className={`h-[80vh] w-[25rem] bg-gray-900 shadow-xl ring-1 ring-gray-400/10 transition-opacity duration-500 ${
               isImageLoaded1 ? "opacity-100" : "opacity-0"
-            } hidden sm:block`} // 'hidden sm:block' hides the image on mobile and shows on small screens and larger
+            } hidden sm:block`}
           />
         </div>
 
-        <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8 lg:pt-[-50px]">
+        <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8 flex justify-center">
           <div className="lg:pr-4">
             <div className="max-w-xl text-base/7 lg:max-w-lg">
               <div className="flex justify-center">
@@ -66,19 +66,18 @@ export default function Example() {
                   }`}
                   style={{ borderRadius: "50%" }}
                 />
-              </div>{" "}
+              </div>
               <div className="border-l-8 border-institution/50 pl-4">
-                {" "}
-                <p className="py-4  text-gray-600 dark:text-gray-400">
+                <p className="py-4 text-gray-600 dark:text-gray-400">
                   We are dedicated to providing top-notch insurance solutions
                   tailored to meet diverse client needs. With a focus on
                   innovation, reliability, and customer satisfaction, our
                   services span risk management, claim administration, retail
                   marketing, and comprehensive insurance products.
-                </p>{" "}
-                <div className="text-start ">
+                </p>
+                <div className="text-start">
                   <a
-                    href="#contact"
+                    href="/services"
                     className="inline-block bg-institution text-white py-2 px-4 rounded-md text-lg font-semibold hover:bg-secondary transition-colors duration-300"
                   >
                     Read More

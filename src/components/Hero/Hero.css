@@ -1,0 +1,15 @@
+@keyframes blurAnimation {
+  0% {
+    backdrop-filter: blur(0);
+  }
+  50% {
+    backdrop-filter: blur(10px);
+  }
+  100% {
+    backdrop-filter: blur(0);
+  }
+}
+
+.animate-blur-effect {
+  animation: blurAnimation 10s ease-in-out infinite;
+}

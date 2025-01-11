@@ -51,30 +51,29 @@ export default function Hero() {
           <h1 className="text-5xl font-bold tracking-tight leading-none sm:text-7xl text-gray-100 dark:text-white">
             Secure Your Future with{" "}
             <span className="text-green-300 dark:text-gradient">
-              Equilibrium Insurance Broker Nig Ltd.
+              Equilibrium Insurance
             </span>
           </h1>
-          <p className="mt-5 text-lg font-semibold sm:text-xl/8 text-gray-800 dark:text-gray-400">
-            At Equilibrium Insurance Broker Nig Ltd, we specialize in offering
-            comprehensive and personalized insurance solutions. Whether it's for
-            your health, property, or business, we've got you covered with
-            tailored policies that give you peace of mind.
-          </p>
+          {/* Shortened and sharp text content */}
+          <div className="mt-5 text-lg font-semibold sm:text-xl/8 text-dark bg-white bg-opacity-50 backdrop-blur-md p-6 rounded-md transition-all duration-1000 ease-in-out hover:backdrop-blur-[15px]">
+            Get personalized insurance for your health, property, or business.
+            We’ve got you covered.
+          </div>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a
               href="#"
               className="rounded-md bg-institution px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
-              Get started
+              Get Started
             </a>
             <a href="#" className="text-sm/6 font-semibold text-gray-200 ">
-              Learn more <span aria-hidden="true">→</span>
+              Learn More <span aria-hidden="true">→</span>
             </a>
           </div>
         </div>
       </div>
 
-      {/* Overlay (Only affects the background, not text) */}
+      {/* Overlay (with blur effect applied only to the background behind the text) */}
       <div className="absolute inset-0 z-5 bg-black bg-opacity-30"></div>
     </div>
   );

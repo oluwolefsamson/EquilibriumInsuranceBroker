@@ -18,14 +18,14 @@ const Brochure = () => {
   };
 
   return (
-    <div className="bg-white dark:bg-gray-950 dark:text-white h-full">
-      <div className="container mx-auto py-[100px] px-6 flex flex-col lg:flex-row w-full items-center justify-between gap-8">
+    <div className="bg-white dark:bg-gray-950 dark:text-white h-full ">
+      <div className="container mx-auto py-6 lg:py-[100px] md:py-[70px] sm:py-[100px]  px-6 flex flex-col lg:flex-row w-full items-start justify-between gap-8">
         {/* Left Side: Business Overview Content */}
         <div className="flex-1 text-center lg:text-left">
-          <h1 className="text-3xl font-bold text-gray-800 dark:text-white mb-4">
+          <h1 className="text-3xl font-bold text-gray-800 dark:text-white mb-4 text-start">
             Business Overview
           </h1>
-          <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+          <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-start">
             Equilibrum Insurance Brokerage is a leading independent insurance
             brokerage firm that specializes in providing comprehensive insurance
             solutions to individuals, families, and businesses. We are dedicated
@@ -38,7 +38,7 @@ const Brochure = () => {
           {/* Download Button */}
           <button
             onClick={handleDownload}
-            className="mt-4 px-6 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 transition-transform duration-300 ease-in-out relative group overflow-hidden"
+            className="mt-4 self-start flex items-start px-6 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 transition-transform duration-300 ease-in-out relative group overflow-hidden"
           >
             <span className="absolute inset-0 bg-blue-700 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
             <span className="relative z-10">Download Brochure</span>

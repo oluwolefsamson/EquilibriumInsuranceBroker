@@ -17,9 +17,9 @@ const TeamSecond = () => {
   };
 
   return (
-    <section className="lg:py-12  px-4 md:px-16 mx-auto">
-      <div className="text-center pt-[70px]">
-        <span className="text-3xl  font-bold text-blue-600  dark:text-white ">
+    <section className="lg:py-12 px-4 md:px-16 mx-auto">
+      <div className="text-center pt-[70px] mb-8">
+        <span className="text-3xl font-bold text-blue-600 dark:text-white">
           THE MANAGEMENT
         </span>
         <br />
@@ -39,25 +39,31 @@ const TeamSecond = () => {
           modifier: 1,
           slideShadows: true,
         }}
-        pagination={pagination}
-        modules={[EffectCoverflow, Pagination]}
+        pagination={{
+          clickable: true,
+          renderBullet: function (index, className) {
+            return `<span class="${className}"></span>`;
+          },
+        }}
+        modules={[EffectCoverflow]}
         className="w-full py-12"
       >
         {data.map((man, i) => (
           <SwiperSlide
             key={i}
-            className="w-72 lg:h-[490px]  flex flex-col items-center bg-white lg:shadow-lg rounded-lg overflow-hidden p-4"
+            className="flex flex-col items-center bg-white shadow-lg rounded-lg overflow-hidden p-4 max-w-[370px] sm:max-w-[300px] md:max-w-[280px] w-full"
           >
-            <img
-              src={man.image}
-              alt={man.name}
-              className="w-40 h-40 rounded-full object-cover mb-4"
-            />
+            <div className="flex justify-center items-center mb-4">
+              <img
+                src={man.image}
+                alt={man.name}
+                className="w-40 h-40 rounded-full object-cover"
+              />
+            </div>
             <div className="text-center">
               <span className="block text-lg font-semibold text-gray-900">
                 {man.name}
               </span>
-
               <span className="text-green-500 text-sm font-medium">
                 {man.position}
               </span>

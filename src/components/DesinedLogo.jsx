@@ -13,7 +13,7 @@ const DesignedLogo = () => {
         <span className="text-2xl font-bold text-green-400 md:text-xl">
           EQUILIBRIUM
           <p className="text-sm font-bold text-green-700 md:text-xs ">
-            INSURANCE BROKER NIG LTD
+            INSURANCE BROKER
           </p>
         </span>
       </a>
