@@ -1,14 +1,57 @@
-"use client";
-
 import { useState } from "react";
-import { ChevronDownIcon } from "@heroicons/react/16/solid";
-import { Field, Label, Switch } from "@headlessui/react";
+import emailjs from "@emailjs/browser";
 
 export default function ContactForm() {
   const [agreed, setAgreed] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  console.log(formData); // Check what is being sent
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState("");
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (isSubmitting) return; // Prevent duplicate submissions
+    setIsSubmitting(true);
+
+    const emailData = {
+      user_name: formData.name,
+      user_email: formData.email,
+      message: formData.message,
+    };
+
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        emailData,
+        import.meta.env.VITE_EMAILJS_USER_ID
+      );
+      alert("Message sent successfully!");
+      setStatus("Message sent successfully!");
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("Error sending message:", error);
+      setStatus("Failed to send message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
-    <div className="isolate dark:bg-gray-900 text-gray-900 dark:text-white px-6 lg:py-[35px] py-[50px]  lg:px-8">
+    <div className="isolate flex items-center justify-center dark:bg-gray-900 text-gray-900 dark:text-white px-6 lg:py-[35px] py-[50px] lg:px-8">
       <div
         aria-hidden="true"
         className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
@@ -21,173 +64,106 @@ export default function ContactForm() {
           className="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]"
         />
       </div>
-      <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
-          Contact Us
-        </h2>
-        <p className="mt-2 text-lg/8">
-          Get in touch with us for personalized insurance solutions.
-        </p>
-      </div>
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-10">
+        {/* Contact Image */}
+        <div className="hidden lg:flex flex-shrink-0 items-center justify-center">
+          <img
+            src="/contactImg.png" // Replace with your image path
+            alt="Contact Us"
+            className="w-full max-w-sm rounded-lg"
+          />
+        </div>
 
-      <form
-        action="#"
-        method="POST"
-        className="mx-auto mt-16 max-w-xl sm:mt-20"
-      >
-        <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-          <div>
-            <label
-              htmlFor="first-name"
-              className="block text-sm/6 font-semibold "
-            >
-              First name
-            </label>
-            <div className="mt-2.5">
-              <input
-                id="first-name"
-                name="first-name"
-                type="text"
-                autoComplete="given-name"
-                placeholder="John"
-                className="block w-full rounded-md bg-white px-3.5 py-2 text-base outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-green-600"
-              />
-            </div>
+        {/* Contact Form */}
+        <div className="flex-grow flex flex-col items-center justify-center">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
+              Contact Us
+            </h2>
+            <p className="mt-2 text-lg/8">
+              Get in touch with us for personalized insurance solutions.
+            </p>
           </div>
-          <div>
-            <label
-              htmlFor="last-name"
-              className="block text-sm/6 font-semibold "
-            >
-              Last name
-            </label>
-            <div className="mt-2.5">
-              <input
-                id="last-name"
-                name="last-name"
-                type="text"
-                autoComplete="family-name"
-                placeholder="Doe"
-                className="block w-full rounded-md bg-white px-3.5 py-2 text-base outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-green-600"
-              />
-            </div>
-          </div>
-          <div className="sm:col-span-2">
-            <label htmlFor="company" className="block text-sm/6 font-semibold ">
-              Company
-            </label>
-            <div className="mt-2.5">
-              <input
-                id="company"
-                name="company"
-                type="text"
-                autoComplete="organization"
-                placeholder="Company Inc."
-                className="block w-full rounded-md bg-white px-3.5 py-2 text-base outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-green-600"
-              />
-            </div>
-          </div>
-          <div className="sm:col-span-2">
-            <label htmlFor="email" className="block text-sm/6 font-semibold ">
-              Email
-            </label>
-            <div className="mt-2.5">
-              <input
-                id="email"
-                name="email"
-                type="email"
-                autoComplete="email"
-                placeholder="you@example.com"
-                className="block w-full rounded-md bg-white px-3.5 py-2 text-base outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-green-600"
-              />
-            </div>
-          </div>
-          <div className="sm:col-span-2">
-            <label
-              htmlFor="phone-number"
-              className="block text-sm/6 font-semibold "
-            >
-              Phone number
-            </label>
-            <div className="mt-2.5">
-              <div className="flex rounded-md bg-white outline outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-green-600">
-                <div className="grid shrink-0 grid-cols-1 focus-within:relative">
-                  <select
-                    id="country"
-                    name="country"
-                    autoComplete="country"
-                    aria-label="Country"
-                    className="col-start-1 row-start-1 w-full appearance-none rounded-md py-2 pl-3.5 pr-7 text-base dark:text-black placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-green-600 sm:text-sm/6"
-                  >
-                    <option>NG</option>
-                    <option>US</option>
-                  </select>
-                  <ChevronDownIcon
-                    color="black"
-                    aria-hidden="true"
-                    className="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end sm:size-4"
+
+          <form
+            onSubmit={handleSubmit}
+            className="mx-auto mt-8 max-w-xl sm:mt-10 w-full"
+          >
+            <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+              <div>
+                <label htmlFor="name" className="block text-sm/6 font-semibold">
+                  Full name
+                </label>
+                <div className="mt-2.5">
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    value={formData.name}
+                    onChange={handleChange}
+                    autoComplete="given-name"
+                    placeholder="John"
+                    className="block w-full rounded-md bg-white px-3.5 py-2 text-base outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-green-600"
                   />
                 </div>
-                <input
-                  id="phone-number"
-                  name="phone-number"
-                  type="text"
-                  placeholder="123-456-7890"
-                  className="block min-w-0 grow py-1.5 pl-1 pr-3 text-base text-gray-900 placeholder:text-gray-400 focus:outline focus:outline-0 sm:text-sm/6"
-                />
+              </div>
+
+              <div className="sm:col-span-2">
+                <label
+                  htmlFor="email"
+                  className="block text-sm/6 font-semibold"
+                >
+                  Email
+                </label>
+                <div className="mt-2.5">
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    autoComplete="email"
+                    placeholder="you@example.com"
+                    className="block w-full rounded-md bg-white px-3.5 py-2 text-base outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-green-600"
+                  />
+                </div>
+              </div>
+
+              <div className="sm:col-span-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm/6 font-semibold"
+                >
+                  Message
+                </label>
+                <div className="mt-2.5">
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows={4}
+                    placeholder="Your message here..."
+                    className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-green-600"
+                  />
+                </div>
               </div>
             </div>
-          </div>
-          <div className="sm:col-span-2">
-            <label
-              htmlFor="message"
-              className="block text-sm/6 font-semibold  "
-            >
-              Message
-            </label>
-            <div className="mt-2.5">
-              <textarea
-                id="message"
-                name="message"
-                rows={4}
-                placeholder="Your message here..."
-                className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-green-600"
-                defaultValue={""}
-              />
-            </div>
-          </div>
-          <Field className="flex gap-x-4 sm:col-span-2">
-            <div className="flex h-6 items-center">
-              <Switch
-                checked={agreed}
-                onChange={setAgreed}
-                className="group flex w-8 flex-none cursor-pointer rounded-full bg-gray-200 p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600 data-[checked]:bg-green-600"
+            <div className="mt-10">
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="block w-full rounded-md bg-green-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
               >
-                <span className="sr-only">Agree to policies</span>
-                <span
-                  aria-hidden="true"
-                  className="size-4 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out group-data-[checked]:translate-x-3.5"
-                />
-              </Switch>
+                {isSubmitting ? "Sending..." : "Let's talk"}
+              </button>
             </div>
-            <Label className="text-sm/6 text-gray-600">
-              By selecting this, you agree to our{" "}
-              <a href="#" className="font-semibold text-green-600">
-                privacy&nbsp;policy
-              </a>
-              .
-            </Label>
-          </Field>
+          </form>
+          {status && (
+            <p className="mt-4 text-center text-lg font-semibold">{status}</p>
+          )}
         </div>
-        <div className="mt-10">
-          <button
-            type="submit"
-            className="block w-full rounded-md bg-green-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
-          >
-            Let's talk
-          </button>
-        </div>
-      </form>
+      </div>
     </div>
   );
 }
