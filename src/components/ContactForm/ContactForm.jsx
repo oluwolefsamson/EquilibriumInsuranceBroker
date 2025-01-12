@@ -86,7 +86,7 @@ export default function ContactForm() {
             <h2 className="text-balance text-4xl font-semibold tracking-tight sm:text-5xl text-start">
               Contact Us
             </h2>
-            <p className="mt-2 text-lg/8">
+            <p className="mt-2 text-lg/8 text-start">
               Get in touch with us for personalized insurance solutions.
             </p>
           </div>
