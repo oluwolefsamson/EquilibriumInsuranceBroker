@@ -8,9 +8,9 @@ export default function ContactForm() {
     email: "",
     message: "",
   });
-  console.log(formData); // Check what is being sent
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [status, setStatus] = useState("");
+  const [imageLoaded, setImageLoaded] = useState(false); // State for image loading
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -67,17 +67,23 @@ export default function ContactForm() {
       <div className="flex flex-col lg:flex-row items-center justify-center gap-10">
         {/* Contact Image */}
         <div className="hidden lg:flex flex-shrink-0 items-center justify-center">
+          {!imageLoaded && (
+            <div className="w-full max-w-sm h-60 rounded-lg bg-gray-200 animate-pulse"></div>
+          )}
           <img
             src="/contactImg.png" // Replace with your image path
             alt="Contact Us"
-            className="w-full max-w-sm rounded-lg"
+            className={`w-full max-w-sm rounded-lg transition-opacity duration-300 ${
+              imageLoaded ? "opacity-100" : "opacity-0"
+            }`}
+            onLoad={() => setImageLoaded(true)}
           />
         </div>
 
         {/* Contact Form */}
         <div className="flex-grow flex flex-col items-center justify-center">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
+            <h2 className="text-balance text-4xl font-semibold tracking-tight sm:text-5xl text-start">
               Contact Us
             </h2>
             <p className="mt-2 text-lg/8">

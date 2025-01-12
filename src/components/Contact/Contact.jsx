@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { MdCall } from "react-icons/md";
 import { BsInstagram } from "react-icons/bs";
 import { FaWhatsapp } from "react-icons/fa";
@@ -6,8 +6,10 @@ import { BiLogoGmail } from "react-icons/bi";
 import contactImg from "../../assets/website/contactImg.jpg";
 
 const Contact = () => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   return (
-    <section className="w-full p-8 lg:py-[120px] flex flex-col items-center justify-center ">
+    <section className="w-full p-8 lg:py-[120px] flex flex-col items-center justify-center">
       <div className="flex flex-wrap items-center justify-between w-full max-w-screen-xl px-6">
         {/* Left Side */}
         <div className="flex flex-col gap-6 w-full md:w-1/2">
@@ -26,7 +28,7 @@ const Contact = () => {
             <div className="flex flex-wrap gap-6 w-full sm:w-1/2 md:w-full">
               <div className="flex flex-col items-center bg-white p-4 border border-gray-300 rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-lg w-full sm:w-1/2 md:w-auto">
                 <div className="flex items-center gap-4">
-                  <div className="flex justify-center items-center  bg-lightBlue rounded-full p-2">
+                  <div className="flex justify-center items-center bg-lightBlue rounded-full p-2">
                     <MdCall size={25} color="green" />
                   </div>
                   <div className="flex flex-col">
@@ -54,7 +56,7 @@ const Contact = () => {
                   </div>
                 </div>
                 <a href="https://wa.link/xdcypy">
-                  <button className="w-full bg-lightBlue text--600 greenpy-2 text-green-600 font-semibold hover:bg-green-600 hover:text-white transition-all">
+                  <button className="w-full bg-lightBlue text-green-600 py-2 font-semibold hover:bg-green-600 hover:text-white transition-all">
                     Chat Now
                   </button>
                 </a>
@@ -75,7 +77,7 @@ const Contact = () => {
                   </div>
                 </div>
                 <a href="https://www.instagram.com/equilibriuminsurancebroker/">
-                  <button className="w-full  text-green-600 py-2 font-semibold hover:bg-green-600 hover:text-white transition-all">
+                  <button className="w-full text-green-600 py-2 font-semibold hover:bg-green-600 hover:text-white transition-all">
                     Send Message
                   </button>
                 </a>
@@ -109,10 +111,16 @@ const Contact = () => {
           className="w-full md:w-1/2 mt-6 md:mt-0"
         >
           <div className="relative w-full h-full">
+            {!imageLoaded && (
+              <div className="animate-pulse bg-gray-300 rounded-md w-full lg:h-[500px] md:h-[800px] sm:h-[200px]" />
+            )}
             <img
               src={contactImg}
               alt="Contact"
-              className="w-full lg:h-[500px] md:h-[800px] sm:h-[200px] object-cover rounded-md"
+              onLoad={() => setImageLoaded(true)}
+              className={`w-full lg:h-[500px] md:h-[800px] sm:h-[200px] object-cover rounded-md ${
+                imageLoaded ? "block" : "hidden"
+              }`}
             />
           </div>
         </div>
