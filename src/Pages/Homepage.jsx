@@ -11,6 +11,7 @@ import TeamSecond from "../components/TeamSecond/TeamSecond.jsx";
 import Cta from "../components/Cta/Cta.jsx";
 import BrandsLogo from "../components/BrandsLogo/BrandsLogo.jsx";
 import BusinessOutlook from "../components/BusinessOutlook/BusinessOutlook.jsx";
+import BoardMembers from "../components/BoardMembers/BoardMembers.jsx";
 
 const Homepage = () => {
   return (
@@ -23,6 +24,7 @@ const Homepage = () => {
       <BusinessOutlook />
       <Testimonial />
       <Faq />
+      {/* <BoardMembers /> */}
       <TeamSecond />
       <Cta />
     </div>

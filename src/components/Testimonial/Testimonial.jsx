@@ -4,24 +4,24 @@ import Slider from "react-slick";
 const testimonialData = [
   {
     id: 1,
-    name: "Sarah Johnson",
-    position: "Business Owner, Los Angeles",
-    text: "Equilibrium Insurance Broker ensured I got the best coverage for my business. Highly recommended for their professionalism and care!",
-    img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=faces&fit=crop&w=150&h=150&q=80",
+    name: "John Praise",
+    position: "Entrepreneur, Abuja",
+    text: "Equilibrium Insurance Broker provided outstanding service and guided me through selecting the best insurance for my business. A remarkable experience!",
+    img: "/test1.jpg",
   },
   {
     id: 2,
-    name: "Michael Lee",
-    position: "Homeowner, Chicago",
-    text: "The team at Equilibrium made choosing home insurance stress-free. Their expertise gave me peace of mind for my family.",
-    img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?crop=faces&fit=crop&w=150&h=150&q=80",
+    name: "Aisha Brown",
+    position: "Homeowner, Lagos",
+    text: "Thanks to Equilibrium, I found the perfect home insurance plan for my family. Their professionalism and care are unmatched.",
+    img: "/test3.jpg",
   },
   {
     id: 3,
-    name: "Emily Davis",
-    position: "Car Owner, Houston",
-    text: "Equilibrium helped me find car insurance that saves money without compromising coverage. A truly seamless experience.",
-    img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?crop=faces&fit=crop&w=150&h=150&q=80",
+    name: "Muhammed Hassan",
+    position: "Car Owner, Abuja",
+    text: "Equilibrium's team made the process of finding car insurance effortless. I couldn't be happier with their support and expertise.",
+    img: "/test3.jpg",
   },
 ];
 

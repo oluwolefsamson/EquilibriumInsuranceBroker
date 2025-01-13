@@ -2,11 +2,11 @@ import React from "react";
 
 // Components
 import AboutUs from "../components/About/AboutUs.jsx";
-import Team from "../components/Team/Team.jsx";
+import Team from "../components/BoardMembers/BoardMembers.jsx";
 
 const Aboutpage = () => {
   return (
-    <div className="py-[20px]">
+    <div>
       <AboutUs />
       <Team />
     </div>

@@ -107,13 +107,11 @@ const Services = () => {
                 </p>
 
                 {/* Read More Button */}
-                <Link to={service.route}>
-                  <a
-                    href="/contact"
-                    className="text-sm/6 font-semibold  text-blue-500 "
-                  >
-                    Learn More <span aria-hidden="true">→</span>
-                  </a>
+                <Link
+                  to={service.route}
+                  className="text-sm/6 font-semibold  text-blue-500 "
+                >
+                  Learn More <span aria-hidden="true">→</span>
                 </Link>
               </div>
             ))}

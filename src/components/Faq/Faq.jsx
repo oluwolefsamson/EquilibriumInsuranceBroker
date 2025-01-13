@@ -49,7 +49,7 @@ const Faq = () => {
                         <div className="p-2 text-blue-700 bg-blue-100 rounded-full">
                           {item.icon}
                         </div>
-                        <span className="text-gray-700  font-bold text-center w-full">
+                        <span className="text-gray-500  font-semibold text-center w-full">
                           {item.heading}
                         </span>
                         <div className="flex items-center text-blue-700 bg-blue-100 rounded-3xl p-[4px]">
