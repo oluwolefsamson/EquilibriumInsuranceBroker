@@ -20,53 +20,52 @@ const Navbar = () => {
   };
 
   return (
-    <div className="sticky top-0 bg-white dark:bg-gray-950 dark:text-white z-50 ">
-      <div className="container mx-auto py-4 px-6 flex justify-between items-center">
-        {/* Logo Section */}
-        <DesignedLogo />
+    <header className="sticky top-0 z-50 bg-white dark:bg-gray-950 shadow-md">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center py-4">
+          {/* Logo Section */}
+          <DesignedLogo />
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:block">
-          <ul className="flex items-center gap-8 md:gap-4">
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex space-x-6">
             {MenuLinks.map(({ id, name, link }) => (
-              <li key={id}>
-                <a
-                  href={link}
-                  className="text-lg font-poppins font-normal tracking-wide  transition-colors duration-300 md:text-md font-sans" // Updated font styles
-                >
-                  {name}
-                </a>
-              </li>
+              <Link
+                key={id}
+                to={link}
+                className="text-lg font-poppins font-medium tracking-wide transition-colors duration-300 hover:text-sky-500 dark:hover:text-sky-400"
+              >
+                {name}
+              </Link>
             ))}
             <Link to="/contact">
               <button className="primary-btn">Contact</button>
             </Link>
             <DarkMode />
-          </ul>
-        </nav>
+          </nav>
 
-        {/* Mobile Navigation Toggle */}
-        <div className="flex items-center gap-4 md:hidden">
-          <DarkMode />
-          {showMenu ? (
-            <HiMenuAlt1
-              onClick={toggleMenu}
-              className="cursor-pointer"
-              size={30}
-            />
-          ) : (
-            <HiMenuAlt3
-              onClick={toggleMenu}
-              className="cursor-pointer"
-              size={30}
-            />
-          )}
+          {/* Mobile Menu Toggle */}
+          <div className="flex items-center md:hidden">
+            <DarkMode />
+            {showMenu ? (
+              <HiMenuAlt1
+                onClick={toggleMenu}
+                className="cursor-pointer"
+                size={30}
+              />
+            ) : (
+              <HiMenuAlt3
+                onClick={toggleMenu}
+                className="cursor-pointer"
+                size={30}
+              />
+            )}
+          </div>
         </div>
-      </div>
 
-      {/* Responsive Menu */}
-      <ResponsiveMenu showMenu={showMenu} />
-    </div>
+        {/* Responsive Menu */}
+        {showMenu && <ResponsiveMenu showMenu={showMenu} />}
+      </div>
+    </header>
   );
 };
 
