@@ -37,7 +37,7 @@ const RiskAnalysisAndAssesmentComponent = () => {
           <img
             src="/risk.jpg" // Replace with the actual image path
             alt="Brochure"
-            className="w-full max-w-md lg:h-[75vh] sm:h-[50vh] object-cover rounded shadow-lg"
+            className="w-full max-w-md  lg:h-[65vh] sm:h-[50vh] object-cover rounded shadow-lg"
           />
         </div>
       </div>

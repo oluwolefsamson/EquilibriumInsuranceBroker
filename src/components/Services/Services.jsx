@@ -107,11 +107,13 @@ const Services = () => {
                 </p>
 
                 {/* Read More Button */}
-                <Link
-                  to={service.route}
-                  className="inline-block text-white bg-blue-500 font-semibold hover:bg-blue-700 rounded-full px-6 py-2 mt-3 transition duration-200 ease-in-out transform hover:scale-105"
-                >
-                  Read More
+                <Link to={service.route}>
+                  <a
+                    href="/contact"
+                    className="text-sm/6 font-semibold  text-blue-500 "
+                  >
+                    Learn More <span aria-hidden="true">→</span>
+                  </a>
                 </Link>
               </div>
             ))}
