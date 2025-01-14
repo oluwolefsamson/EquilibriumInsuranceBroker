@@ -7,11 +7,10 @@ const PersonalInsuranceComponent = () => {
       <div className="container mx-auto py-[100px] px-6 flex flex-col lg:flex-row w-full items-start justify-between gap-8">
         {/* Left Side: Business Overview Content */}
         <div className="flex-1 text-left">
-          <h1 className="text-3xl font-bold text-gray-800 dark:text-white mb-4 pl-2.5">
+          <h1 className="text-3xl font-bold text-gray-800 dark:text-white mb-4">
             Personal Insurance
           </h1>
           <div className="flex items-start gap-2 mb-4">
-            <FaUser className="text-4xl text-primary" />
             <p className="text-gray-600 dark:text-gray-400">
               Equilibrium Insurance Brokerage offers a comprehensive range of
               personal insurance solutions designed to safeguard individuals and

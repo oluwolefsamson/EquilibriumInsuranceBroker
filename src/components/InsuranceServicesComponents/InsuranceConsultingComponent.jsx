@@ -7,11 +7,10 @@ const InsuranceConsultingComponent = () => {
       <div className="container mx-auto py-[100px] px-6 flex flex-col lg:flex-row w-full items-start justify-between gap-8">
         {/* Left Side: Insurance Consulting Content */}
         <div className="flex-1 text-left">
-          <h1 className="text-3xl font-bold text-gray-800 dark:text-white mb-4 pl-2.5">
+          <h1 className="text-3xl font-bold text-gray-800 dark:text-white mb-4 ">
             Insurance Consulting
           </h1>
           <div className="flex items-start gap-2 mb-4">
-            <FaMedkit className="text-4xl text-primary" />
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
               At Equilibrium Insurance Brokerage, we offer expert insurance
               consulting services to both individuals and businesses. Our

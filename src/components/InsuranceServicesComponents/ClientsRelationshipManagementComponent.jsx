@@ -7,11 +7,10 @@ const ClientsRelationshipManagementComponent = () => {
       <div className="container mx-auto py-[100px] px-6 flex flex-col lg:flex-row w-full items-start justify-between gap-8">
         {/* Left Side: Client Relationship Management Content */}
         <div className="flex-1 text-left">
-          <h1 className="text-3xl font-bold text-gray-800 dark:text-white mb-4 pl-2.5">
+          <h1 className="text-3xl font-bold text-gray-800 dark:text-white mb-4 ">
             Client Relationship Management
           </h1>
           <div className="flex items-start gap-2 mb-4">
-            <FaHandsHelping className="text-4xl text-primary" />
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed  max-w-full lg:max-w-lg">
               At Equilibrium Insurance Brokerage, we prioritize building
               long-term relationships with our clients based on trust,
