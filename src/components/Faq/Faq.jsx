@@ -22,7 +22,7 @@ const Faq = () => {
         <div className="flex flex-col md:flex-row items-center justify-around gap-6 max-w-screen-xl mx-auto px-6">
           {/* Right Side - FAQ Accordion */}
           <div className="w-full md:w-1/2 flex flex-col items-start gap-4 order-1 sm:order-2">
-            <span className="text-2xl font-bold border-l-8 border-primary/50 pl-2 mb-4 text-blue-600 dark:text-white">
+            <span className="text-2xl font-bold border-l-8 border-primary/50 dark:border-institution/50 pl-2 mb-4 text-blue-600 dark:text-white">
               FAQ
             </span>
             <span className="text-pretty text-lg/8 text-gray-600 dark:text-gray-400">

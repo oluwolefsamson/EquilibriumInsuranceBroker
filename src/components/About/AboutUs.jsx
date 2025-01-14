@@ -18,7 +18,7 @@ const AboutUs = () => {
         <div className="flex flex-col md:flex-row items-center gap-12">
           {/* Left Section: Text Content */}
           <div className="md:w-1/2">
-            <h1 className="my-8 border-l-8  border-primary/50 py-2 pl-2 text-3xl font-bold text-blue-600  dark:text-white">
+            <h1 className="my-8 border-l-8  border-primary/50 dark:border-institution/50 py-2 pl-2 text-3xl font-bold text-blue-600  dark:text-white">
               About Us
             </h1>
             <p className="text-lg mb-6 text-gray-600 dark:text-gray-400">
@@ -50,7 +50,7 @@ const AboutUs = () => {
         </div>
 
         {/* Our Mission Section */}
-        <div className="mt-16 bg-gradient-to-r from-blue-400 to-green-300 p-8 rounded-xl shadow-xl text-blue-600  dark:text-white">
+        <div className="mt-[100px] bg-gradient-to-r from-blue-400 to-green-300 p-8 rounded-xl shadow-xl text-blue-600  dark:text-white">
           <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-center ">
             Our Mission
           </h3>
@@ -63,9 +63,9 @@ const AboutUs = () => {
         </div>
 
         {/* Our Values Section */}
-        <div className="mt-16">
+        <div className="mt-[100px]">
           <GradientBackground />
-          <h1 className="my-8 border-l-8  border-primary/50 py-2 pl-2 text-3xl font-bold text-blue-600  dark:text-white">
+          <h1 className="my-8 border-l-8  border-primary/50 dark:border-institution/50 py-2 pl-2 text-3xl font-bold text-blue-600  dark:text-white">
             Our Core Values
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">

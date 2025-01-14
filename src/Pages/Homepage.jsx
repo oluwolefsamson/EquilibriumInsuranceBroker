@@ -24,7 +24,7 @@ const Homepage = () => {
       <BusinessOutlook />
       <Testimonial />
       <Faq />
-      {/* <BoardMembers /> */}
+      <BoardMembers />
       <TeamSecond />
       <Cta />
     </div>

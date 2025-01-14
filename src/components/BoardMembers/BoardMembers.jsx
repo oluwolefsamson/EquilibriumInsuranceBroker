@@ -6,23 +6,23 @@ const people = [
   },
   {
     name: "DR. SINI KWABE",
-    role: "Executive Vice Chairman",
+    role: "Board Member",
     imageUrl: "./sini.png",
   },
   {
     name: "MR. YORKINA BARITORGE GIDEON",
-    role: "Managing Director",
-    imageUrl: "./yorkina.png",
+    role: "Board Member",
+    imageUrl: "./profile.jpg",
   },
   {
     name: "MR. SEUN OWAOLABI",
-    role: "Director of Finance",
-    imageUrl: "./owolabi.png",
+    role: "Board Member",
+    imageUrl: "./profile.jpg",
   },
   {
-    name: "MISS. PRISCILLA MZAMBER AGBA",
-    role: "HR/Administration Officer",
-    imageUrl: "./prisca1.png",
+    name: "MRS. TAIWO ADEDIRAN",
+    role: "Board Member",
+    imageUrl: "./taiwo.png",
   },
 ];
 

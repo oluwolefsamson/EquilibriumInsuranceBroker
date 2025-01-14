@@ -4,51 +4,51 @@ import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 const FooterLinks = [
   {
     title: "About Us",
-    link: "/#about",
+    link: "/about",
   },
   {
     title: "Our Services",
-    link: "/#services",
+    link: "/services",
   },
   {
     title: "Careers",
-    link: "/#careers",
+    link: "/brochure",
   },
   {
     title: "Contact Us",
-    link: "/#contact",
+    link: "/contact",
   },
 ];
 const HelpLinks = [
   {
     title: "Customer Support",
-    link: "/#support",
+    link: "/contact",
   },
   {
     title: "Claims Process",
-    link: "/#claims-process",
+    link: "/contact",
   },
   {
     title: "Terms & Conditions",
-    link: "/#terms",
+    link: "/contact",
   },
   {
     title: "Privacy Policy",
-    link: "/#privacy-policy",
+    link: "/contact",
   },
 ];
 const ResourcesLinks = [
   {
     title: "Insurance Resources",
-    link: "/#resources",
+    link: "/contact",
   },
   {
     title: "FAQ",
-    link: "/#faq",
+    link: "/",
   },
   {
     title: "Subscribe to Newsletters",
-    link: "",
+    link: "/",
   },
 ];
 
@@ -72,13 +72,13 @@ const Footer = () => {
             {/* Social Handles */}
             <div className="flex items-center gap-4 mt-6">
               <a href="#">
-                <FaInstagram className="text-2xl hover:text-primary duration-300" />
+                <FaInstagram className="text-2xl hover:text-primary  dark:hover:text-institution duration-300" />
               </a>
               <a href="#">
-                <FaFacebook className="text-2xl hover:text-primary duration-300" />
+                <FaFacebook className="text-2xl hover:text-primary  dark:hover:text-institution duration-300" />
               </a>
               <a href="#">
-                <FaLinkedin className="text-2xl hover:text-primary duration-300" />
+                <FaLinkedin className="text-2xl hover:text-primary  dark:hover:text-institution duration-300" />
               </a>
             </div>
             <br />
@@ -89,7 +89,10 @@ const Footer = () => {
               <p>Ndola Crescent, Abuja.</p>
               <p>
                 Tel:{" "}
-                <a href="tel:08054288271" className="hover:text-primary">
+                <a
+                  href="tel:08054288271"
+                  className="hover:text-primary  dark:hover:text-institution"
+                >
                   08054288271
                 </a>
               </p>
@@ -97,7 +100,7 @@ const Footer = () => {
                 Email:{" "}
                 <a
                   href="mailto:equilibriuminsurancebroker@gmail.com"
-                  className="hover:text-primary"
+                  className="hover:text-primary  dark:hover:text-institution"
                 >
                   equilibriuminsurancebroker@gmail.com
                 </a>
@@ -115,7 +118,7 @@ const Footer = () => {
                 {FooterLinks.map((link) => (
                   <li
                     key={link.title}
-                    className="cursor-pointer hover:translate-x-1 duration-300 hover:!text-primary space-x-1 text-gray-400"
+                    className="cursor-pointer hover:translate-x-1 duration-300 hover:!text-primary dark:hover:!text-institution space-x-1 text-gray-400"
                   >
                     <span>{link.title}</span>
                   </li>
@@ -131,7 +134,7 @@ const Footer = () => {
                 {HelpLinks.map((link) => (
                   <li
                     key={link.title}
-                    className="cursor-pointer hover:translate-x-1 duration-300 hover:!text-primary space-x-1 text-gray-400"
+                    className="cursor-pointer hover:translate-x-1 duration-300 hover:!text-primary  dark:hover:!text-institution space-x-1 text-gray-400"
                   >
                     <span>{link.title}</span>
                   </li>
@@ -147,7 +150,7 @@ const Footer = () => {
                 {ResourcesLinks.map((link) => (
                   <li
                     key={link.title}
-                    className="cursor-pointer hover:translate-x-1 duration-300 hover:!text-primary space-x-1 text-gray-400"
+                    className="cursor-pointer hover:translate-x-1 duration-300 hover:!text-primary  dark:hover:!text-institution space-x-1 text-gray-400"
                   >
                     <span>{link.title}</span>
                   </li>

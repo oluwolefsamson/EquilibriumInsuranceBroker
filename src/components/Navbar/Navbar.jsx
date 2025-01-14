@@ -20,7 +20,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white dark:bg-gray-950 shadow-md">
+    <header className="sticky top-0 z-50 bg-white dark:bg-gray-950 ">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo Section */}
