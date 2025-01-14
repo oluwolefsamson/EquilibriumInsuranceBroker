@@ -16,26 +16,22 @@ const Faq = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
-    <div className="">
+    <div>
       <GradientBackground />
       <section className="w-full py-[100px] bg-gray-100 dark:bg-gray-950 dark:text-white duration-300">
         <div className="flex flex-col md:flex-row items-center justify-around gap-6 max-w-screen-xl mx-auto px-6">
           {/* Right Side - FAQ Accordion */}
           <div className="w-full md:w-1/2 flex flex-col items-start gap-4 order-1 sm:order-2">
-            <span className="text-2xl font-bold border-l-8 border-primary/50 dark:border-institution/50 pl-2 mb-4 text-blue-600 dark:text-white">
+            <span className=" text-4xl font-bold tracking-tight  dark:text-white sm:text-5xl   dark:border-institution/50 pl-2 mb-4 text-blue-600 ">
               FAQ
             </span>
-            <span className="text-pretty text-lg/8 text-gray-600 dark:text-gray-400">
+            <span className="text-lg text-gray-600 dark:text-gray-400">
               At Equilibrium Insurance Broker, we strive to provide transparent
               and reliable insurance services for our clients. Below are answers
               to some of the frequently asked questions:
             </span>
 
-            <Accordion
-              allowMultipleExpanded={false}
-              preExpanded={[]}
-              className="mt-6 w-full"
-            >
+            <Accordion allowZeroExpanded className="mt-6 w-full">
               {data.map((item, i) => (
                 <AccordionItem
                   key={i}
@@ -44,21 +40,21 @@ const Faq = () => {
                   style={{ borderRadius: "10px" }}
                 >
                   <AccordionItemHeading>
-                    <AccordionItemButton className="flex items-center justify-between px-4 py-3 bg-white cursor-pointer rounded-lg">
+                    <AccordionItemButton className="flex items-center justify-between px-4 py-3 bg-white dark:bg-gray-800 cursor-pointer rounded-lg">
                       <div className="flex items-center justify-center w-full space-x-3">
                         <div className="p-2 text-blue-700 bg-blue-100 rounded-full">
                           {item.icon}
                         </div>
-                        <span className="text-gray-500  font-semibold text-center w-full">
+                        <span className="text-gray-500 font-semibold w-full text-start">
                           {item.heading}
                         </span>
-                        <div className="flex items-center text-blue-700 bg-blue-100 rounded-3xl p-[4px]">
+                        <div className="text-blue-700">
                           <MdOutlineArrowDropDown size={25} />
                         </div>
                       </div>
                     </AccordionItemButton>
                   </AccordionItemHeading>
-                  <AccordionItemPanel className="px-4 py-3 bg-white text-black paragraphText rounded-lg">
+                  <AccordionItemPanel className="px-4 py-3 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-lg">
                     <p>{item.detail}</p>
                   </AccordionItemPanel>
                 </AccordionItem>
