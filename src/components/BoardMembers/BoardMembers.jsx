@@ -9,16 +9,7 @@ const people = [
     role: "Board Member",
     imageUrl: "./sini.png",
   },
-  {
-    name: "MR. YORKINA BARITORGE GIDEON",
-    role: "Board Member",
-    imageUrl: "./profile.jpg",
-  },
-  {
-    name: "MR. SEUN OWAOLABI",
-    role: "Board Member",
-    imageUrl: "./profile.jpg",
-  },
+
   {
     name: "MRS. TAIWO ADEDIRAN",
     role: "Board Member",
