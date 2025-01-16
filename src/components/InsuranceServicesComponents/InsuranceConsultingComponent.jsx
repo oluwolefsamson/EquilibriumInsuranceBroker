@@ -29,7 +29,7 @@ const InsuranceConsultingComponent = () => {
         {/* Right Side: Static Image */}
         <div className="flex-1 flex items-center justify-center">
           <img
-            src="/bro1.jpg" // Replace with the actual image path
+            src="/consulting.jpg" // Replace with the actual image path
             alt="Brochure"
             className="w-full max-w-md h-auto object-cover rounded-2xl shadow-lg"
           />

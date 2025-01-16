@@ -14,7 +14,7 @@ const testimonialData = [
     name: "Aisha Brown",
     position: "Homeowner, Lagos",
     text: "Thanks to Equilibrium, I found the perfect home insurance plan for my family. Their professionalism and care are unmatched.",
-    img: "/test3.jpg",
+    img: "/test2.jpg",
   },
   {
     id: 3,

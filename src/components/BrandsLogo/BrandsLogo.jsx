@@ -12,27 +12,27 @@ const BrandsLogo = () => {
         <img
           src={Brand1}
           alt="Brand 1"
-          className="w-[60px] sm:w-[80px] md:w-[100px] lg:w-[120px] transition-transform duration-300 hover:scale-105"
+          className="w-[40px] sm:w-[60px] md:w-[80px] lg:w-[100px] transition-transform duration-300 hover:scale-105"
         />
         <img
           src={Brand4}
           alt="Brand 4"
-          className="w-[60px] sm:w-[80px] md:w-[100px] lg:w-[120px] h-auto transition-transform duration-300 hover:scale-105"
+          className="w-[40px] sm:w-[60px] md:w-[80px] lg:w-[100px] h-auto transition-transform duration-300 hover:scale-105"
         />
         <img
           src={Brand2}
           alt="Brand 2"
-          className="w-[60px] sm:w-[80px] md:w-[100px] lg:w-[120px] transition-transform duration-300 hover:scale-105"
+          className="w-[40px] sm:w-[60px] md:w-[80px] lg:w-[100px] transition-transform duration-300 hover:scale-105"
         />
         <img
           src={Brand5}
           alt="Brand 5"
-          className="w-[60px] sm:w-[80px] md:w-[100px] lg:w-[120px] transition-transform duration-300 hover:scale-105"
+          className="w-[40px] sm:w-[60px] md:w-[80px] lg:w-[100px] transition-transform duration-300 hover:scale-105"
         />
         <img
           src={Brand3}
           alt="Brand 3"
-          className="w-[50px] sm:w-[70px] md:w-[90px] lg:w-[110px] transition-transform duration-300 hover:scale-105"
+          className="w-[40px] sm:w-[60px] md:w-[80px] lg:w-[100px] transition-transform duration-300 hover:scale-105"
         />
       </div>
     </div>
