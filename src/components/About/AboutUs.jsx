@@ -1,5 +1,5 @@
-import React from "react";
-import aboutImage from "../../assets/website/aboutImg.jpg"; // Replace with the appropriate image path
+import React, { useEffect } from "react";
+import aboutImage from "../../assets/website/aboutImg.jpg";
 import { FaTrophy } from "react-icons/fa";
 import { FaBriefcase } from "react-icons/fa";
 import { FaClipboardCheck } from "react-icons/fa";
@@ -7,21 +7,30 @@ import { FaUsers } from "react-icons/fa";
 import { FaLightbulb } from "react-icons/fa";
 import { FaHandsHelping } from "react-icons/fa";
 import GradientBackground from "../GradientBackground";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const AboutUs = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 3000, // Animation duration (default is 400ms)
+      once: true, // Animation only happens once when scrolling down
+    });
+  }, []);
+
   return (
     <section
       id="about"
-      className="py-10 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white"
+      className="py-[100px] bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white"
     >
       <div className="container px-4 mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-12">
           {/* Left Section: Text Content */}
           <div className="md:w-1/2">
-            <h1 className="my-8  text-4xl font-bold tracking-tight  dark:text-white sm:text-5xl  dark:border-institution/50 py-2 pl-2 ">
-              About Us
+            <h1 className="my-8 text-4xl font-bold tracking-tight  dark:text-white sm:text-5xl dark:border-institution/50 py-2 pl-2  text-blue-600 ">
+              About us
             </h1>
-            <p className="text-lg mb-6 text-gray-600 dark:text-gray-400">
+            <p className="text-lg mb-6 text-gray-600 dark:text-gray-200 leading-loose">
               Equilibrium Insurance Broker (EIB) is a liability company
               incorporated on 18th July 2022, with an authorized share capital
               of N5 Million, as prescribed by the Insurance Act of 2003. The
@@ -50,7 +59,7 @@ const AboutUs = () => {
         </div>
 
         {/* Our Mission Section */}
-        <div className="mt-[100px] bg-gradient-to-r from-blue-400 to-green-300 p-8 rounded-xl shadow-xl   dark:text-white">
+        <div className="my-[150px] bg-gradient-to-r from-blue-400 to-green-300 p-8 rounded-xl shadow-xl   dark:text-white">
           <h3 className="text-2xl text-white sm:text-3xl font-bold mb-4 text-center ">
             Our Mission
           </h3>
@@ -63,14 +72,17 @@ const AboutUs = () => {
         </div>
 
         {/* Our Values Section */}
-        <div className="mt-[100px]">
+        <div className="mt-[150px]">
           <GradientBackground />
           <h1 className="my-8 text-4xl font-bold tracking-tight  dark:text-white sm:text-5xl dark:border-institution/50 py-2 pl-2  text-blue-600 ">
             Our Core Values
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Value 1: Excellence */}
-            <div className="text-center bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300">
+            <div
+              data-aos="zoom-in-up"
+              className="text-center bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300"
+            >
               <div className="w-16 h-16 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-4">
                 <i className="fas fa-trophy text-2xl">
                   <FaTrophy />
@@ -86,7 +98,10 @@ const AboutUs = () => {
               </p>
             </div>
             {/* Value 2: Professionalism */}
-            <div className="text-center bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300">
+            <div
+              data-aos="zoom-in-up"
+              className="text-center bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300"
+            >
               <div className="w-16 h-16 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-4">
                 <i className="fas fa-briefcase text-2xl">
                   <FaBriefcase />
@@ -101,7 +116,10 @@ const AboutUs = () => {
               </p>
             </div>
             {/* Value 3: Accountability */}
-            <div className="text-center bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300">
+            <div
+              data-aos="zoom-in-up"
+              className="text-center bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300"
+            >
               <div className="w-16 h-16 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-4">
                 <i className="fas fa-check-circle text-2xl">
                   <FaClipboardCheck />
@@ -116,7 +134,10 @@ const AboutUs = () => {
               </p>
             </div>
             {/* Value 4: Customer Focus */}
-            <div className="text-center bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300">
+            <div
+              data-aos="zoom-in-up"
+              className="text-center bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300"
+            >
               <div className="w-16 h-16 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-4">
                 <i className="fas fa-users text-2xl">
                   <FaUsers />
@@ -132,7 +153,10 @@ const AboutUs = () => {
               </p>
             </div>
             {/* Value 5: Innovation */}
-            <div className="text-center bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300">
+            <div
+              data-aos="zoom-in-up"
+              className="text-center bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300"
+            >
               <div className="w-16 h-16 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-4">
                 <i className="fas fa-lightbulb text-2xl">
                   <FaLightbulb />
@@ -147,7 +171,10 @@ const AboutUs = () => {
               </p>
             </div>
             {/* Value 6: Team Work */}
-            <div className="text-center bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300">
+            <div
+              data-aos="zoom-in-up"
+              className="text-center bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300"
+            >
               <div className="w-16 h-16 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-4">
                 <i className="fas fa-users-cog text-2xl">
                   <FaHandsHelping />

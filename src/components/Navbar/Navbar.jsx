@@ -37,8 +37,10 @@ const Navbar = () => {
                 {name}
               </Link>
             ))}
-            <Link to="/contact">
-              <button className="primary-btn">Contact</button>
+            <Link to="/contact" className="flex items-center justify-center ">
+              <button className="primary-btn bg-blue-800 hover:bg-blue-900">
+                Contact
+              </button>
             </Link>
             <DarkMode />
           </nav>

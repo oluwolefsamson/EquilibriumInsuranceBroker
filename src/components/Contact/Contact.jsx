@@ -105,11 +105,7 @@ const Contact = () => {
         </div>
 
         {/* Right Side (Image) */}
-        <div
-          data-aos="fade-up"
-          data-aos-duration="3000"
-          className="w-full md:w-1/2 mt-6 md:mt-0"
-        >
+        <div className="w-full md:w-1/2 mt-6 md:mt-0">
           <div className="relative w-full h-full">
             {!imageLoaded && (
               <div className="animate-pulse bg-gray-300 rounded-md w-full lg:h-[500px] md:h-[800px] sm:h-[200px]" />

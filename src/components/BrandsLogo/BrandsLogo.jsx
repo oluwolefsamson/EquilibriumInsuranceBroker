@@ -7,7 +7,7 @@ import Brand5 from "../../assets/brands/5.png";
 
 const BrandsLogo = () => {
   return (
-    <div className="w-full bg-gray-100 dark:bg-gray-800 py-8">
+    <div className="w-full bg-black dark:bg-gray-800 py-8">
       <div className="flex flex-wrap items-center justify-center gap-6 px-4 max-w-screen-xl mx-auto">
         <img
           src={Brand1}

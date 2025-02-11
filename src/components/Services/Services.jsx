@@ -46,7 +46,7 @@ const servicesData = [
     name: "Insurance Consulting",
     icon: <FaMedkit className="text-4xl text-primary" />,
     description:
-      "Equilibrium Insurance Brokerage offers professional insurance consulting services for individuals and businesses seeking expert advice on risk management, coverage optimization, and insurance program design. Our consultants work closely with clients to develop strategic insurance plans aligned with their unique goals and objectives.",
+      "Equilibrium Insurance Brokerage offers professional insurance consulting services for individuals and businesses seeking expert advice on risk management, coverage optimization, and insurance program design.",
     route: "/insurance-consulting",
     aosDelay: "900",
   },
@@ -54,7 +54,7 @@ const servicesData = [
     name: "Client Relationship Management",
     icon: <FaHandsHelping className="text-4xl text-primary" />,
     description:
-      "We prioritize building long-term relationships with our clients based on trust, transparency, and exceptional service. Our team is committed to understanding each client's evolving needs, providing ongoing support, and reviewing insurance programs periodically to accommodate changes in circumstances.",
+      "We prioritize building long-term relationships with our clients based on trust, transparency, and exceptional service. Our team is committed to understanding each client's evolving needs. ",
     route: "/client-relationship-management",
     aosDelay: "1100",
   },
@@ -68,17 +68,11 @@ const Services = () => {
       <div className="bg-gray-100 dark:bg-black dark:text-white py-12 sm:grid sm:place-items-center">
         <div className="container">
           {/* Header Section */}
-          <div className="pb-12 text-center space-y-3">
-            <h1
-              data-aos="fade-up"
-              className="text-3xl font-semibold sm:text-3xl"
-            >
+          <div className="py-12 text-center space-y-3">
+            <h1 className=" text-4xl font-bold tracking-tight dark:text-white sm:text-5xl dark:border-institution/50 pl-2  text-blue-600 ">
               Explore Our Insurance Services
             </h1>
-            <p
-              data-aos="fade-up"
-              className="text-sm text-gray-600 dark:text-gray-400"
-            >
+            <p className="text-lg text-gray-600 dark:text-gray-300 mb-12 max-w-xl mx-auto text-center">
               At Equilibrium Insurance Brokerage, we offer tailored insurance
               solutions to protect your personal and business assets.
             </p>
@@ -88,28 +82,29 @@ const Services = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
             {servicesData.map((service) => (
               <div
+                data-aos="zoom-in-down"
                 key={service.name}
-                data-aos="fade-up"
-                data-aos-delay={service.aosDelay}
-                className="card space-y-3 sm:space-y-4 p-6 bg-white dark:bg-gray-950 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out"
+                className="card space-y-3 sm:space-y-4 p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300"
               >
                 {/* Service Icon */}
-                <div>{service.icon}</div>
+                <div className="w-16 h-16 bg-blue-100 mx-auto rounded-full flex items-center justify-center">
+                  <i className="fas fa-check-circle text-2xl">{service.icon}</i>
+                </div>
 
                 {/* Service Name */}
-                <h1 className="text-lg font-semibold text-gray-800 dark:text-white">
+                <h1 className="text-lg font-semibold text-gray-800 text-center">
                   {service.name}
                 </h1>
 
                 {/* Service Description */}
-                <p className="text-gray-600 dark:text-gray-400">
+                <p className="text-md text-gray-600 text-center ">
                   {service.description}
                 </p>
 
                 {/* Read More Button */}
                 <Link
                   to={service.route}
-                  className="text-sm/6 font-semibold  text-blue-500 "
+                  className="text-sm/6 font-semibold flex items-center justify-center text-blue-500 "
                 >
                   Learn More <span aria-hidden="true">→</span>
                 </Link>
