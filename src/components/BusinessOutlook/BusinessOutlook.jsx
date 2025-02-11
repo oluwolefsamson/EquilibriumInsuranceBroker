@@ -12,10 +12,10 @@ export default function Example() {
     <div className="relative isolate overflow-hidden   bg-white  px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
       {/* Header Section */}
       <div className="text-center space-y-4 mb-12 sm:mb-16">
-        <h1 className="py-3 text-4xl font-bold tracking-tight dark:text-white sm:text-5xl text-blue-600 text-center">
+        <h1 className="py-3 text-4xl font-bold  tracking-tight dark:text-grey-800 sm:text-5xl text-blue-600 text-center">
           Our Business Outlook
         </h1>
-        <p className="text-lg text-gray-600 dark:text-gray-300 mb-12 max-w-3xl mx-auto text-center">
+        <p className="text-lg text-gray-800 mb-12 max-w-3xl mx-auto text-center">
           Delivering exceptional insurance and consultancy services tailored to
           meet both individual and business needs, with a focus on innovation,
           reliability, and satisfaction.
@@ -26,10 +26,10 @@ export default function Example() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16 items-center">
         {/* Left Column */}
         <div className="space-y-6 sm:space-y-8">
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-gray-800 dark:text-gray-200">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-gray-800 ">
             Why Choose Us
           </h2>
-          <p className="text-md md:text-base lg:text-lg  text-gray-700 dark:text-gray-200 leading-relaxed">
+          <p className="text-md md:text-base lg:text-lg  text-gray-700  leading-relaxed">
             We are dedicated to providing top-notch insurance solutions tailored
             to diverse client needs. Our services span risk management, claim
             administration, retail marketing, and comprehensive insurance
