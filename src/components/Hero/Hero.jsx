@@ -61,8 +61,8 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 isolate px-6 pt-14 lg:px-8">
         <div className="mx-auto max-w-2xl py-20 md:py-48 lg:py-56 text-center">
-          <h1 className="text-5xl font-bold tracking-tight lg:leading-normal sm sm:text-7xl text-gray-100 dark:text-white">
-            Secure Your Future with
+          <h1 className="text-5xl font-bold tracking-tight leading-normal lg:leading-normal sm sm:text-7xl text-gray-100 dark:text-white">
+            Secure Your Future with{" "}
             <span className="text-green-300 dark:text-gradient ">
               Equilibrium Insurance Broker
             </span>

@@ -22,7 +22,7 @@ export default function Team() {
     <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto grid max-w-7xl gap-20 px-6 lg:px-8 xl:grid-cols-3">
         <div className="max-w-xl">
-          <h2 className="py-3 text-3xl font-semibold tracking-tight dark:text-white sm:text-5xl text-blue-600 ">
+          <h2 className="py-3 text-3xl font-semibold tracking-tight  sm:text-5xl text-blue-600 ">
             Meet Our Board Members
           </h2>
           <p className="mt-6 text-lg text-gray-600">

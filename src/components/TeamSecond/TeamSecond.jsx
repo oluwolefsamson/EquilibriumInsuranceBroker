@@ -17,15 +17,13 @@ const TeamSecond = () => {
   };
 
   return (
-    <section className="lg:py-12 px-4 md:px-16 mx-auto bg-gray-100 ">
+    <section className="lg:py-12 px-4 md:px-16 mx-auto bg-gray-200 ">
       <div className="text-center pt-[70px] mb-8">
-        <span className="text-3xl font-bold text-blue-600 dark:text-white">
+        <span className="text-3xl font-bold text-blue-600 ">
           THE MANAGEMENT
         </span>
         <br />
-        <span className="text-green-500 text-xl font-medium dark:text-white">
-          TEAM
-        </span>
+        <span className="text-green-500 text-xl font-medium ">TEAM</span>
       </div>
       <Swiper
         effect={"coverflow"}
