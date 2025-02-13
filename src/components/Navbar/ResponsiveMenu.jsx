@@ -1,5 +1,5 @@
 import React from "react";
-import { FaUserCircle } from "react-icons/fa";
+
 import { MenuLinks } from "./Navbar";
 import { Link } from "react-router-dom";
 
@@ -33,12 +33,6 @@ const ResponsiveMenu = ({ showMenu, setShowMenu }) => {
           <button className="primary-btn">Contact</button>
         </Link>
       </nav>
-
-      {/* Footer Section */}
-      <div className="footer mt-auto">
-        {new Date().getFullYear()} All Rights Reserved. <br />
-        <span style={{ color: "skyblue" }}>EIB</span>.
-      </div>
     </div>
   );
 };
