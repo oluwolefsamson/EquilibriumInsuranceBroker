@@ -41,7 +41,7 @@ const App = () => {
 
   return (
     <Router>
-      <div className="bg-white dark:bg-black dark:text-white text-black overflow-x-hidden">
+      <div className="dark:text-white text-black overflow-x-hidden">
         {/* Conditionally render Navbar and Footer based on loading state */}
         {isLoaded && <Navbar />}
 

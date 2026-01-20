@@ -1,4 +1,4 @@
-import React from "react";
+
 import Brand1 from "../../assets/brands/1.png";
 import Brand2 from "../../assets/brands/2.png";
 import Brand3 from "../../assets/brands/3.png";
@@ -7,41 +7,31 @@ import Brand5 from "../../assets/brands/5.png";
 
 const BrandsLogo = () => {
   return (
-    <div
-      className="w-full bg-black dark:bg-gray-800 py-8 "
-      style={{
-        borderTop: "3px solid green",
-        borderBottom: "3px solid green",
-      }}
-    >
-      <div className="flex flex-wrap items-center justify-center gap-6 px-4 max-w-screen-xl mx-auto">
-        <img
-          src={Brand1}
-          alt="Brand 1"
-          className="w-[40px] sm:w-[60px] md:w-[80px] lg:w-[100px] transition-transform duration-300 hover:scale-105"
-        />
-        <img
-          src={Brand4}
-          alt="Brand 4"
-          className="w-[40px] sm:w-[60px] md:w-[80px] lg:w-[100px] h-auto transition-transform duration-300 hover:scale-105"
-        />
-        <img
-          src={Brand2}
-          alt="Brand 2"
-          className="w-[40px] sm:w-[60px] md:w-[80px] lg:w-[100px] transition-transform duration-300 hover:scale-105"
-        />
-        <img
-          src={Brand5}
-          alt="Brand 5"
-          className="w-[40px] sm:w-[60px] md:w-[80px] lg:w-[100px] transition-transform duration-300 hover:scale-105"
-        />
-        <img
-          src={Brand3}
-          alt="Brand 3"
-          className="w-[40px] sm:w-[60px] md:w-[80px] lg:w-[100px] transition-transform duration-300 hover:scale-105"
-        />
+    <section className="bg-white dark:bg-gray-950">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Subtle divider */}
+        <div className="border-t border-b border-gray-200 dark:border-white/10 py-10">
+          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
+            {[Brand1, Brand4, Brand2, Brand5, Brand3].map((brand, index) => (
+              <img
+                key={index}
+                src={brand}
+                alt={`Partner ${index + 1}`}
+                className="
+                  h-10 sm:h-12 md:h-14
+                  w-auto
+                  opacity-80
+                  grayscale
+                  transition-opacity
+                  hover:opacity-100
+                  dark:invert-[0.85]
+                "
+              />
+            ))}
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

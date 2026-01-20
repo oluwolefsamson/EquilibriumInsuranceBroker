@@ -65,7 +65,7 @@ const Services = () => {
     <>
       {/* Anchor for navigation */}
       <span id="services"></span>
-      <div className="bg-gray-100 dark:bg-black dark:text-white py-12 sm:grid sm:place-items-center">
+      <div className="dark:text-white py-12 sm:grid sm:place-items-center">
         <div className="container">
           {/* Header Section */}
           <div className="py-12 text-center space-y-3">

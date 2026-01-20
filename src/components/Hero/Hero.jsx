@@ -1,95 +1,84 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import hero1 from "../../assets/website/hero1.jpg";
-import hero2 from "../../assets/website/hero2.jpg";
-import hero4 from "../../assets/website/hero4.jpg";
-
-const sliderImages = [
-  { type: "image", src: hero1 },
-  { type: "image", src: hero2 },
-  { type: "image", src: hero4 },
-  { type: "color", color: "black" },
-];
+import { Link } from "react-router-dom";
 
 export default function Hero() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [loaded, setLoaded] = useState(false);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % sliderImages.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <div className="relative md:h-[850px] lg:h-[900px] w-full overflow-hidden">
-      {/* Background Slider */}
-      <div className="absolute inset-0 z-0">
-        {sliderImages.map((slide, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
-              currentSlide === index ? "opacity-100" : "opacity-0"
-            }`}
-            style={{
-              background:
-                slide.type === "image" ? `url(${slide.src})` : slide.color,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              height: "100%",
-              width: "100%",
-            }}
-          >
-            {slide.type === "image" && !loaded && (
-              <div className="absolute inset-0 bg-gray-300 animate-pulse"></div>
-            )}
-            {slide.type === "image" && (
-              <img
-                src={slide.src}
-                alt="Slide"
-                className="w-full h-full object-cover hidden"
-                loading="lazy"
-                onLoad={() => setLoaded(true)}
-              />
-            )}
-          </div>
-        ))}
-      </div>
+    <section className="bg-white dark:bg-gray-950">
+     <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 lg:py-24 min-h-[80vh] flex items-center">
 
-      {/* Content */}
-      <div className="relative z-10 isolate px-6 pt-14 lg:px-8">
-        <div className="mx-auto max-w-2xl py-20 md:py-48 lg:py-56 text-center">
-          <h1 className="text-5xl font-bold tracking-tight leading-normal lg:leading-normal sm sm:text-7xl text-gray-100 dark:text-white">
-            Secure Your Future with{" "}
-            <span className="text-green-300 dark:text-gradient ">
-              Equilibrium Insurance Broker
-            </span>
-          </h1>
-          <div className="mt-5 text-lg font-semibold sm:text-xl/8 text-dark bg-white bg-opacity-50 backdrop-blur-md p-6 rounded-md transition-all duration-1000 ease-in-out hover:backdrop-blur-[15px]">
-            Get personalized insurance for your health, property, or business.
-            We’ve got you covered.
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          {/* LEFT: Copy */}
+          <div className="lg:col-span-6">
+            {/* Small label (not flashy) */}
+            <div className="inline-flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-gray-300">
+              <span className="h-2 w-2 rounded-full bg-green-700" />
+              Insurance made clear and dependable
+            </div>
+
+            <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 dark:text-white leading-[1.08]">
+              Protect what you’ve built {" "}
+              <span className="text-green-800 dark:text-green-300">
+                with coverage that fits.
+              </span>
+            </h1>
+
+            <p className="mt-5 max-w-xl text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+              Equilibrium Insurance Broker helps you choose the right plan for your
+              health, property, or business with straightforward guidance from start
+              to claim.
+            </p>
+
+            {/* CTAs */}
+            <div className="mt-7 flex flex-col sm:flex-row sm:items-center gap-3">
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center rounded-xl bg-green-800 px-6 py-3 text-sm font-semibold text-white hover:bg-green-900 transition shadow-sm"
+              >
+                Request a Quote
+              </Link>
+
+              <Link
+                to="/services"
+                className="inline-flex items-center justify-center rounded-xl border border-green-800 px-6 py-3 text-sm font-semibold text-green-800 hover:bg-green-50 dark:hover:bg-white/5 transition"
+              >
+                View Services
+              </Link>
+            </div>
+
+            {/* Practical trust row (subtle, not “stats cards”) */}
+            <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-600 dark:text-gray-300">
+              <span className="inline-flex items-center gap-2">
+                <span className="h-1.5 w-1.5 rounded-full bg-green-700" />
+                Clear recommendations
+              </span>
+              <span className="inline-flex items-center gap-2">
+                <span className="h-1.5 w-1.5 rounded-full bg-green-700" />
+                Fast support
+              </span>
+              <span className="inline-flex items-center gap-2">
+                <span className="h-1.5 w-1.5 rounded-full bg-green-700" />
+                Business & personal plans
+              </span>
+            </div>
           </div>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
-            <a
-              href="/contact"
-              className="rounded-md bg-institution px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            >
-              Get Started
-            </a>
-            <a
-              href="/contact"
-              className="text-sm/6 font-semibold text-gray-200"
-            >
-              Learn More <span aria-hidden="true">→</span>
-            </a>
-          </div>
+
+          {/* RIGHT: Image */}
+         
+         {/* RIGHT: Image */}
+<div className="lg:col-span-6 h-full">
+  <div className="relative h-full min-h-[360px] sm:min-h-[420px] lg:min-h-[520px]">
+   <img
+  src="/heroImg.png"
+  alt="Insurance consultation"
+  className="absolute inset-0 w-full h-full object-contain"
+/>
+
+  </div>
+</div>
+
         </div>
       </div>
-
-      {/* Overlay */}
-      <div className="absolute inset-0 z-5 bg-black bg-opacity-30"></div>
-    </div>
+    </section>
   );
 }

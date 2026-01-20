@@ -15,7 +15,7 @@ import BoardMembers from "../components/BoardMembers/BoardMembers.jsx";
 
 const Homepage = () => {
   return (
-    <div className="bg-white dark:bg-black dark:text-white text-black overflow-x-hidden">
+    <div className="dark:text-white text-black overflow-x-hidden">
       <Hero />
       <BrandsLogo />
       <AboutUs />

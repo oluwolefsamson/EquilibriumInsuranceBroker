@@ -6,6 +6,22 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-image: url("/background-img.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+section:not(.no-section-bg) {
+  background-image: url("/background-img.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+html,
+body {
+  height: 100%;
 }
 html {
   scroll-behavior: smooth;

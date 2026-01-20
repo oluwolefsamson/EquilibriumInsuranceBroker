@@ -9,7 +9,7 @@ export default function Example() {
   const handleImageLoad2 = () => setIsImageLoaded2(true);
 
   return (
-    <div className="relative isolate overflow-hidden   bg-white  px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
+    <div className="relative isolate overflow-hidden px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
       {/* Header Section */}
       <div className="text-center space-y-4 mb-12 sm:mb-16">
         <h1 className="py-3 text-4xl font-bold  tracking-tight dark:text-grey-800 sm:text-5xl text-blue-600 text-center">

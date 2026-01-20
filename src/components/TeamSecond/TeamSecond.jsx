@@ -17,7 +17,7 @@ const TeamSecond = () => {
   };
 
   return (
-    <section className="lg:py-12 px-4 md:px-16 mx-auto bg-gray-200 ">
+    <section className="lg:py-12 px-4 md:px-16 mx-auto">
       <div className="text-center pt-[70px] mb-8">
         <span className="text-3xl font-bold text-blue-600 ">
           THE MANAGEMENT

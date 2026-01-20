@@ -55,7 +55,7 @@ const ResourcesLinks = [
 const Footer = () => {
   return (
     <div className="bg-dark text-white">
-      <section className="container py-10">
+      <section className="container py-10 no-section-bg">
         <div className="grid md:grid-cols-3 py-5">
           {/* Company Details */}
           <div className="py-8 px-4">

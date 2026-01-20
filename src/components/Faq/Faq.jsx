@@ -17,7 +17,7 @@ const Faq = () => {
 
   return (
     <div>
-      <section className="w-full py-[100px] bg-gray-100 dark:bg-gray-950 dark:text-white duration-300">
+      <section className="w-full py-[100px] dark:text-white duration-300">
         <div className="flex flex-col md:flex-row items-center justify-around gap-6 max-w-screen-xl mx-auto px-6">
           {/* Right Side - FAQ Accordion */}
           <div className="w-full md:w-1/2 flex flex-col items-start gap-4 order-1 sm:order-2">

@@ -40,7 +40,7 @@ const Testimonial = () => {
   };
 
   return (
-    <div className="py-[100px] bg-gradient-to-r from-blue-50 to-blue-100 dark:from-gray-800 dark:to-gray-900">
+    <div className="py-[100px]">
       <div className="container mx-auto px-6">
         <div
           data-aos="fade-up"
