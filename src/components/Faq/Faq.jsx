@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   Accordion,
   AccordionItem,
@@ -10,80 +10,84 @@ import "react-accessible-accordion/dist/fancy-example.css";
 import { MdOutlineArrowDropDown } from "react-icons/md";
 import data from "../../Utils/accordion";
 import faqImg from "../../assets/website/faq.png";
-import GradientBackground from "../GradientBackground";
 
 const Faq = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
-    <div>
-      <section className="w-full py-[100px] dark:text-white duration-300">
-        <div className="flex flex-col md:flex-row items-center justify-around gap-6 max-w-screen-xl mx-auto px-6">
-          {/* Right Side - FAQ Accordion */}
-          <div className="w-full md:w-1/2 flex flex-col items-start gap-4 order-1 sm:order-2">
-            <h1 className="my-8 text-4xl font-bold tracking-tight  dark:text-white sm:text-5xl dark:border-institution/50 py-2 pl-2  text-blue-600 ">
-              Faq
-            </h1>
-            <span className="text-lg text-gray-600 dark:text-gray-200">
-              At Equilibrium Insurance Broker, we strive to provide transparent
-              and reliable insurance services for our clients. Below are answers
-              to some of the frequently asked questions:
-            </span>
-
-            <Accordion
-              allowZeroExpanded
-              className="mt-6 w-full"
-              data-aos="flip-left"
-            >
-              {data.map((item, i) => (
-                <AccordionItem
-                  key={i}
-                  uuid={i}
-                  className="mb-5 border shadow-md"
-                  style={{ borderRadius: "10px" }}
-                >
-                  <AccordionItemHeading>
-                    <AccordionItemButton className="flex items-center justify-between px-4 py-3 bg-white cursor-pointer rounded-lg">
-                      <div className="flex items-center justify-center w-full space-x-3">
-                        <div className="p-2 text-blue-700 bg-blue-100 rounded-full">
-                          {item.icon}
-                        </div>
-                        <span className="text-gray-500 font-semibold w-full text-start">
-                          {item.heading}
-                        </span>
-                        <div className="text-blue-700">
-                          <MdOutlineArrowDropDown size={25} />
-                        </div>
-                      </div>
-                    </AccordionItemButton>
-                  </AccordionItemHeading>
-                  <AccordionItemPanel className="px-4 py-3 bg-white  text-gray-600 rounded-lg leading-loose">
-                    <p>{item.detail}</p>
-                  </AccordionItemPanel>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </div>
-
-          {/* Left Side - Image with Skeleton Loader */}
-          <div className="w-full md:w-1/2 flex justify-center order-2 sm:order-1">
-            <div className="w-full h-full overflow-hidden">
-              {!imageLoaded && (
-                <div className="w-full h-full bg-gray-300  animate-pulse rounded-3xl"></div>
-              )}
-              <img
-                src={faqImg}
-                alt="Hero"
-                className={`w-full h-full object-cover rounded-3xl transition-opacity duration-300 ${
-                  imageLoaded ? "opacity-100" : "opacity-0"
-                }`}
-                onLoad={() => setImageLoaded(true)}
-              />
-            </div>
+    <section className="w-full py-20 sm:py-24 dark:text-white">
+      <div className="max-w-screen-xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+        {/* LEFT — IMAGE */}
+        <div className="order-2 lg:order-1 h-full">
+          <div className="relative w-full h-full min-h-[520px] overflow-hidden rounded-3xl">
+            {!imageLoaded && (
+              <div className="absolute inset-0 bg-slate-200 animate-pulse" />
+            )}
+            <img
+              src={faqImg}
+              alt="Frequently asked questions"
+              className={`w-full h-full object-cover transition-opacity duration-500 ${
+                imageLoaded ? "opacity-100" : "opacity-0"
+              }`}
+              onLoad={() => setImageLoaded(true)}
+            />
           </div>
         </div>
-      </section>
-    </div>
+
+        {/* RIGHT — FAQ */}
+        <div className="order-1 lg:order-2">
+          {/* Header */}
+          <div className="space-y-4">
+            <p className="inline-flex items-center rounded-full bg-green-50 px-4 py-1 text-sm font-semibold text-green-700 dark:bg-green-500/10 dark:text-green-300">
+              FAQs
+            </p>
+
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white">
+              Frequently Asked Questions
+            </h2>
+
+            <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300">
+              At Equilibrium Insurance Broker, we provide transparent and
+              reliable insurance services. Here are answers to common questions.
+            </p>
+          </div>
+
+          {/* Accordion */}
+          <Accordion allowZeroExpanded className="mt-10 w-full" data-aos="flip-left">
+            {data.map((item, i) => (
+              <AccordionItem
+                key={i}
+                uuid={i}
+                className="mb-4 overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm dark:border-white/10 dark:bg-white/5"
+              >
+                <AccordionItemHeading>
+                  <AccordionItemButton className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer">
+                    <div className="flex items-center gap-3">
+                      <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-green-50 text-green-700 ring-1 ring-green-100 dark:bg-green-500/10 dark:text-green-300 dark:ring-white/10">
+                        {item.icon}
+                      </div>
+
+                      <span className="font-semibold text-slate-900 dark:text-white">
+                        {item.heading}
+                      </span>
+                    </div>
+
+                    <MdOutlineArrowDropDown
+                      size={28}
+                      className="text-green-700 dark:text-green-300"
+                    />
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+
+                <AccordionItemPanel className="px-5 pb-5 text-slate-600 dark:text-slate-300 leading-relaxed">
+                  <p>{item.detail}</p>
+                </AccordionItemPanel>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </div>
+    </section>
   );
 };
 

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { HiMenuAlt3, HiMenuAlt1 } from "react-icons/hi";
 import { Link, NavLink } from "react-router-dom";
-import DarkMode from "./DarkMode";
 import DesignedLogo from "../DesinedLogo";
 
 export const MenuLinks = [
@@ -48,11 +47,6 @@ const Navbar = () => {
                 </NavLink>
               ))}
 
-              {/* Divider */}
-              <span className="mx-2 h-6 w-px bg-green-200 dark:bg-green-800" />
-
-              <DarkMode />
-
               {/* Contact Button */}
               <Link to="/contact">
                 <button className="rounded-xl px-4 py-2 text-sm font-semibold text-white bg-green-800 hover:bg-green-900 active:scale-[0.98] transition shadow-sm">
@@ -63,10 +57,9 @@ const Navbar = () => {
 
             {/* Mobile Controls */}
             <div className="flex items-center gap-2 md:hidden">
-              <DarkMode />
               <button
                 onClick={toggleMenu}
-                className="p-2 rounded-xl border border-green-200 dark:border-green-800 bg-green-50 dark:bg-green-900/50 hover:bg-green-100 dark:hover:bg-green-900 transition"
+                className="p-2 rounded-xl border border-green-200 dark:border-green-800 bg-green-50 dark:bg-green-900/50 text-green-900 hover:bg-green-100 dark:hover:bg-green-900 transition"
               >
                 {showMenu ? <HiMenuAlt1 size={26} /> : <HiMenuAlt3 size={26} />}
               </button>

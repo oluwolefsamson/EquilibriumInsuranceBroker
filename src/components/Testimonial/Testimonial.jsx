@@ -1,4 +1,3 @@
-import React from "react";
 import Slider from "react-slick";
 
 const testimonialData = [
@@ -6,27 +5,27 @@ const testimonialData = [
     id: 1,
     name: "John Praise",
     position: "Entrepreneur, Abuja",
-    text: "Equilibrium Insurance Broker provided outstanding service and guided me through selecting the best insurance for my business. A remarkable experience!",
+    text: "Equilibrium Insurance Broker guided me through choosing the best insurance for my business. Their professionalism and attention to detail are exceptional.",
     img: "/test1.jpg",
   },
   {
     id: 2,
     name: "Aisha Brown",
     position: "Homeowner, Lagos",
-    text: "Thanks to Equilibrium, I found the perfect home insurance plan for my family. Their professionalism and care are unmatched.",
+    text: "I found the perfect home insurance plan for my family. The team was supportive, transparent, and genuinely cared about my needs.",
     img: "/test2.jpg",
   },
   {
     id: 3,
     name: "Muhammed Hassan",
     position: "Car Owner, Abuja",
-    text: "Equilibrium's team made the process of finding car insurance effortless. I couldn't be happier with their support and expertise.",
+    text: "Getting car insurance was effortless with Equilibrium. They handled everything smoothly and explained every step clearly.",
     img: "/test3.jpg",
   },
 ];
 
 const Testimonial = () => {
-  var settings = {
+  const settings = {
     dots: true,
     arrows: false,
     infinite: true,
@@ -40,42 +39,56 @@ const Testimonial = () => {
   };
 
   return (
-    <div className="py-[100px]">
+    <section className="py-24 bg-slate-50">
       <div className="container mx-auto px-6">
         <div
           data-aos="fade-up"
-          className="max-w-screen-xl mx-auto gap-6 text-center"
+          className="max-w-3xl mx-auto text-center space-y-6"
         >
-          <h2 className="text-4xl font-bold text-blue-600 dark:text-white  mb-6">
+          {/* Badge */}
+          <p className="inline-flex items-center rounded-full bg-green-50 px-4 py-1 text-sm font-semibold text-green-700">
+            Testimonials
+          </p>
+
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">
             What Our Clients Say
           </h2>
-          <Slider {...settings}>
+
+          <p className="text-slate-600 max-w-xl mx-auto">
+            Trusted by individuals and businesses across Nigeria for reliable,
+            transparent, and professional insurance services.
+          </p>
+
+          <Slider {...settings} className="mt-10">
             {testimonialData.map(({ id, name, position, text, img }) => (
-              <div key={id} className="relative gap-4">
-                {/* Card */}
-                <div className="flex flex-col items-center gap-5 p-6 sm:p-8 bg-white  rounded-3xl shadow-lg relative transform transition duration-500 hover:scale-105">
-                  {/* Image */}
+              <div key={id} className="px-2">
+                <div className="relative flex flex-col items-center gap-6 p-8 bg-white rounded-3xl shadow-md hover:shadow-xl transition">
+                  {/* Avatar */}
                   <img
                     src={img}
                     alt={name}
-                    className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-4 border-green-500 shadow-md object-cover"
+                    className="w-24 h-24 rounded-full border-4 border-green-600 object-cover shadow"
                   />
-                  {/* Text */}
-                  <p className="text-gray-600  italic text-sm sm:text-lg text-center">
+
+                  {/* Quote */}
+                  <p className="text-slate-600 italic text-sm sm:text-base leading-relaxed">
                     “{text}”
                   </p>
+
                   {/* Name */}
-                  <h3 className="text-lg sm:text-xl font-semibold text-gray-900 ">
-                    {name}
-                  </h3>
-                  <p className="text-blue-500 text-xs sm:text-sm">{position}</p>
+                  <div className="text-center">
+                    <h3 className="text-lg font-semibold text-slate-900">
+                      {name}
+                    </h3>
+                    <p className="text-green-700 text-sm">{position}</p>
+                  </div>
                 </div>
               </div>
             ))}
           </Slider>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

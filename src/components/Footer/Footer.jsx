@@ -1,4 +1,4 @@
-import React from "react";
+
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const FooterLinks = [
@@ -161,7 +161,8 @@ const Footer = () => {
         </div>
         <p className="font-poppins font-normal text-center text-[18px] leading-[27px] text-white">
           {new Date().getFullYear()} All Rights Reserved. <br />
-          <span style={{ color: "skyblue" }}>OS</span>.
+          
+          <span style={{ color: "skyblue" }}>OLSTECH SOFTWARE SOLUTIONS LIMITED</span>.
         </p>
       </section>
     </div>

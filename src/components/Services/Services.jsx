@@ -1,7 +1,5 @@
-import React from "react";
 import {
   FaHome,
-  FaCar,
   FaUser,
   FaMedkit,
   FaBriefcase,
@@ -12,108 +10,116 @@ import { Link } from "react-router-dom";
 const servicesData = [
   {
     name: "Personal Insurance",
-    icon: <FaUser className="text-4xl text-primary" />,
+    icon: FaUser,
     description:
-      "Equilibrium Insurance Brokerage offers a wide range of personal insurance solutions to protect individuals and families from unexpected events. Our offerings include home insurance, auto insurance, life insurance, health insurance, and personal liability coverage.",
+      "Protect individuals and families with home, auto, life, health, and personal liability coverage—tailored to your needs.",
     route: "/personal-insurance",
     aosDelay: "0",
   },
   {
     name: "Commercial Insurance",
-    icon: <FaBriefcase className="text-4xl text-primary" />,
+    icon: FaBriefcase,
     description:
-      "We specialize in assisting businesses of all sizes in managing their risk exposures. Our commercial insurance services cover areas such as property insurance, general liability insurance, workers' compensation insurance, professional liability insurance, and business interruption insurance.",
+      "Insurance solutions for businesses—property, liability, workers’ compensation, professional liability, and business interruption.",
     route: "/commercial-insurance",
-    aosDelay: "300",
+    aosDelay: "200",
   },
   {
-    name: "Risk Assessment and Analysis",
-    icon: <FaHandsHelping className="text-4xl text-primary" />,
+    name: "Risk Assessment & Analysis",
+    icon: FaHandsHelping,
     description:
-      "Equilibrium Insurance Brokerage conducts thorough risk assessments and analysis for clients to identify potential vulnerabilities and develop tailored risk management strategies. We assist in evaluating existing insurance coverage and recommending adjustments to ensure comprehensive protection.",
+      "We identify vulnerabilities and design risk management strategies, ensuring your coverage remains strong and complete.",
     route: "/risk-assesment",
-    aosDelay: "500",
+    aosDelay: "400",
   },
   {
     name: "Claims Assistance",
-    icon: <FaHome className="text-4xl text-primary" />,
+    icon: FaHome,
     description:
-      "We provide dedicated support to our clients throughout the claims process, acting as their advocate when filing insurance claims. Our team works closely with insurance providers to expedite claim settlements and ensure fair compensation for losses.",
+      "Dedicated support through the claims process—filing, follow-up, and advocacy for fair and timely settlements.",
     route: "/claims-assistance",
-    aosDelay: "700",
+    aosDelay: "600",
   },
   {
     name: "Insurance Consulting",
-    icon: <FaMedkit className="text-4xl text-primary" />,
+    icon: FaMedkit,
     description:
-      "Equilibrium Insurance Brokerage offers professional insurance consulting services for individuals and businesses seeking expert advice on risk management, coverage optimization, and insurance program design.",
+      "Expert guidance on coverage optimization, program design, and risk planning for individuals and organizations.",
     route: "/insurance-consulting",
-    aosDelay: "900",
+    aosDelay: "800",
   },
   {
     name: "Client Relationship Management",
-    icon: <FaHandsHelping className="text-4xl text-primary" />,
+    icon: FaHandsHelping,
     description:
-      "We prioritize building long-term relationships with our clients based on trust, transparency, and exceptional service. Our team is committed to understanding each client's evolving needs. ",
+      "Built on trust and transparency—ongoing support and periodic reviews as your needs evolve.",
     route: "/client-relationship-management",
-    aosDelay: "1100",
+    aosDelay: "1000",
   },
 ];
 
 const Services = () => {
   return (
-    <>
-      {/* Anchor for navigation */}
-      <span id="services"></span>
-      <div className="dark:text-white py-12 sm:grid sm:place-items-center">
-        <div className="container">
-          {/* Header Section */}
-          <div className="py-12 text-center space-y-3">
-            <h1 className=" text-4xl font-bold tracking-tight dark:text-white sm:text-5xl dark:border-institution/50 pl-2  text-blue-600 ">
-              Explore Our Insurance Services
-            </h1>
-            <p className="text-lg text-gray-600 dark:text-gray-300 mb-12 max-w-xl mx-auto text-center">
-              At Equilibrium Insurance Brokerage, we offer tailored insurance
-              solutions to protect your personal and business assets.
-            </p>
-          </div>
+    <section id="services" className="py-16 sm:py-20 dark:text-white">
+      <div className="container mx-auto px-4">
+        {/* Header */}
+        <div className="mx-auto max-w-2xl text-center space-y-3">
+          <p className="inline-flex items-center gap-2 rounded-full bg-green-50 px-4 py-1 text-sm font-semibold text-green-700 dark:bg-green-500/10 dark:text-green-300">
+            Our Services
+          </p>
 
-          {/* Services Cards Section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-            {servicesData.map((service) => (
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-slate-900 dark:text-white">
+            Explore Our Insurance Services
+          </h2>
+
+          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300">
+            Tailored insurance solutions designed to protect your personal and
+            business assets—backed by expert guidance and reliable support.
+          </p>
+        </div>
+
+        {/* Cards */}
+        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
+          {servicesData.map((service) => {
+            const Icon = service.icon;
+
+            return (
               <div
                 data-aos="zoom-in-down"
+                data-aos-delay={service.aosDelay}
                 key={service.name}
-                className="card space-y-3 sm:space-y-4 p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300"
+                className="group relative overflow-hidden rounded-2xl border border-slate-100 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-white/10 dark:bg-white/5"
               >
-                {/* Service Icon */}
-                <div className="w-16 h-16 bg-blue-100 mx-auto rounded-full flex items-center justify-center">
-                  <i className="fas fa-check-circle text-2xl">{service.icon}</i>
+                {/* subtle green hover glow */}
+                <div className="pointer-events-none absolute inset-0 opacity-0 transition group-hover:opacity-100 bg-gradient-to-br from-green-500/12 via-transparent to-transparent" />
+
+                {/* Icon */}
+                <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-green-50 text-green-700 ring-1 ring-green-100 dark:bg-green-500/10 dark:text-green-300 dark:ring-white/10">
+                  <Icon className="text-2xl" />
                 </div>
 
-                {/* Service Name */}
-                <h1 className="text-lg font-semibold text-gray-800 text-center">
+                <h3 className="text-lg font-semibold text-slate-900 dark:text-white">
                   {service.name}
-                </h1>
+                </h3>
 
-                {/* Service Description */}
-                <p className="text-md text-gray-600 text-center ">
+                <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-300 line-clamp-4">
                   {service.description}
                 </p>
 
-                {/* Read More Button */}
-                <Link
-                  to={service.route}
-                  className="text-sm/6 font-semibold flex items-center justify-center text-blue-500 "
-                >
-                  Learn More <span aria-hidden="true">→</span>
-                </Link>
+                <div className="mt-5">
+                  <Link
+                    to={service.route}
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-green-700 hover:text-green-800 dark:text-green-300"
+                  >
+                    Learn More <span aria-hidden="true">→</span>
+                  </Link>
+                </div>
               </div>
-            ))}
-          </div>
+            );
+          })}
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

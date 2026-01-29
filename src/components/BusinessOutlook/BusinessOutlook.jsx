@@ -1,69 +1,70 @@
 import { useState } from "react";
-import outlook from "../../assets/website/businessOutlook.jpg";
+import outlook from "../../assets/website/businessOutlook.png";
 
-export default function Example() {
-  const [isImageLoaded1, setIsImageLoaded1] = useState(false);
-  const [isImageLoaded2, setIsImageLoaded2] = useState(false);
-
-  const handleImageLoad1 = () => setIsImageLoaded1(true);
-  const handleImageLoad2 = () => setIsImageLoaded2(true);
+export default function BusinessOutlook() {
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   return (
-    <div className="relative isolate overflow-hidden px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
-      {/* Header Section */}
-      <div className="text-center space-y-4 mb-12 sm:mb-16">
-        <h1 className="py-3 text-4xl font-bold  tracking-tight dark:text-grey-800 sm:text-5xl text-blue-600 text-center">
+    <section className="relative isolate overflow-hidden px-4 sm:px-6 lg:px-8 py-20 sm:py-24 lg:py-32">
+      {/* Header */}
+      <div className="text-center space-y-4 mb-14 sm:mb-20">
+        <p className="inline-flex items-center rounded-full bg-green-50 px-4 py-1 text-sm font-semibold text-green-700">
+          Business Outlook
+        </p>
+
+        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900">
           Our Business Outlook
         </h1>
-        <p className="text-lg text-gray-800 mb-12 max-w-3xl mx-auto text-center">
+
+        <p className="text-lg text-slate-600 max-w-3xl mx-auto">
           Delivering exceptional insurance and consultancy services tailored to
-          meet both individual and business needs, with a focus on innovation,
-          reliability, and satisfaction.
+          individuals and businesses, with a strong focus on innovation,
+          reliability, and customer satisfaction.
         </p>
       </div>
 
-      {/* Content Section */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16 items-center">
-        {/* Left Column */}
-        <div className="space-y-6 sm:space-y-8">
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-gray-800 ">
-            Why Choose Us
+      {/* Content */}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        {/* LEFT */}
+        <div className="space-y-6">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-slate-900">
+            Why Choose Equilibrium
           </h2>
-          <p className="text-md md:text-base lg:text-lg  text-gray-700  leading-relaxed">
-            We are dedicated to providing top-notch insurance solutions tailored
-            to diverse client needs. Our services span risk management, claim
-            administration, retail marketing, and comprehensive insurance
-            products. Trust us for reliability, innovation, and outstanding
-            customer support.
+
+          <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
+            We provide trusted insurance solutions designed around your needs.
+            From risk management and claims administration to retail marketing
+            and comprehensive coverage, we combine expertise, innovation, and
+            responsive support you can rely on.
           </p>
+
           <a
             href="/services"
-            className="inline-block bg-blue-600 text-white py-2 px-4 sm:py-3 sm:px-6 rounded-lg text-sm sm:text-lg font-medium shadow-md hover:bg-blue-700 transition duration-300"
+            className="inline-flex items-center justify-center rounded-xl bg-green-700 px-6 py-3 text-sm sm:text-base font-semibold text-white shadow-lg hover:bg-green-800 transition"
           >
-            Explore Our Services
+            Explore Our Services →
           </a>
         </div>
 
-        {/* Right Column */}
+        {/* RIGHT — IMAGE */}
         <div
           data-aos="fade-left"
-          className="flex justify-center items-center relative"
+          className="relative flex justify-center"
         >
-          {!isImageLoaded1 && (
-            <div className="absolute inset-0 w-full h-full bg-gray-200 animate-pulse rounded-lg"></div>
+          {!isImageLoaded && (
+            <div className="absolute inset-0 rounded-3xl bg-slate-200 animate-pulse" />
           )}
+
           <img
             src={outlook}
-            alt="Business Visual"
-            onLoad={handleImageLoad1}
-            className={`rounded-lg shadow-lg transition-opacity duration-500 w-full max-w-lg object-cover ${
-              isImageLoaded1 ? "opacity-100" : "opacity-0"
+            alt="Equilibrium Insurance Business Outlook"
+            onLoad={() => setIsImageLoaded(true)}
+            className={`relative w-full max-w-xl h-[520px] object-cover rounded-3xl shadow-2xl transition-opacity duration-500 ${
+              isImageLoaded ? "opacity-100" : "opacity-0"
             }`}
           />
         </div>
       </div>
-
-      {/* Additional Content */}
-    </div>
+    </section>
   );
 }

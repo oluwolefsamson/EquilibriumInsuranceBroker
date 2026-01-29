@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function Hero() {
   return (
     <section className="bg-white dark:bg-gray-950">
-     <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 lg:py-24 min-h-[80vh] flex items-center">
+     <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 md:py-20 lg:py-24 min-h-[80vh] flex items-center">
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           {/* LEFT: Copy */}
@@ -63,17 +63,13 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* RIGHT: Image */}
-         
-         {/* RIGHT: Image */}
 <div className="lg:col-span-6 h-full">
   <div className="relative h-full min-h-[360px] sm:min-h-[420px] lg:min-h-[520px]">
-   <img
-  src="/heroImg.png"
-  alt="Insurance consultation"
-  className="absolute inset-0 w-full h-full object-contain"
-/>
-
+    <img
+      src="/heroImg.png"
+      alt="Insurance consultation"
+      className="absolute inset-0 w-full h-full object-contain"
+    />
   </div>
 </div>
 

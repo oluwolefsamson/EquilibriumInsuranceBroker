@@ -148,51 +148,50 @@ const AboutUs = () => {
             </div>
           </div>
 
-          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {values.map((v, idx) => {
-              const Icon = v.icon;
-              return (
-                <div
-                  key={v.title}
-                  data-aos="fade-up"
-                  data-aos-delay={idx * 60}
-                  className="rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-gray-900/20 p-6 shadow-sm hover:shadow-md transition-shadow"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="h-11 w-11 rounded-xl bg-green-50 dark:bg-green-900/30 flex items-center justify-center">
-                      <Icon className="text-green-800 dark:text-green-300" />
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-bold text-gray-900 dark:text-white">
-                        {v.title}
-                      </h4>
-                      <p className="mt-2 text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-                        {v.desc}
-                      </p>
+          <div className="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+            <div className="lg:col-span-5 h-full" data-aos="fade-up">
+              <div className="h-full rounded-3xl overflow-hidden border border-gray-200 dark:border-white/10 shadow-lg">
+                <img
+                  src="/core-values.png"
+                  alt="Our core values"
+                  className="w-full h-full object-contain"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
+            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6 h-full">
+              {values.map((v, idx) => {
+                const Icon = v.icon;
+                return (
+                  <div
+                    key={v.title}
+                    data-aos="fade-up"
+                    data-aos-delay={idx * 60}
+                    className="rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-gray-900/20 p-6 shadow-sm hover:shadow-md transition-shadow"
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="h-11 w-11 rounded-xl bg-green-50 dark:bg-green-900/30 flex items-center justify-center">
+                        <Icon className="text-green-800 dark:text-green-300" />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-bold text-gray-900 dark:text-white">
+                          {v.title}
+                        </h4>
+                        <p className="mt-2 text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                          {v.desc}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </div>
 
         {/* CTA */}
-        <div className="mt-16 md:mt-20 text-center" data-aos="fade-up">
-          <p className="text-gray-600 dark:text-gray-300 text-base sm:text-lg max-w-2xl mx-auto">
-            Ready to secure your future? Get in touch and we’ll recommend the best
-            options tailored to your needs.
-          </p>
-
-          <div className="mt-6 flex justify-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center justify-center rounded-xl bg-green-800 px-7 py-3.5 text-sm font-semibold text-white hover:bg-green-900 transition shadow-sm"
-            >
-              Get in Touch
-            </Link>
-          </div>
-        </div>
+      
       </div>
     </section>
   );
