@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { MdCall } from "react-icons/md";
 import { BsInstagram } from "react-icons/bs";
 import { FaWhatsapp } from "react-icons/fa";
@@ -8,116 +8,110 @@ import contactImg from "../../assets/website/contactImg.jpg";
 const Contact = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
+  const contactOptions = [
+    {
+      label: "Call",
+      action: "Call Now",
+      href: "",
+      icon: <MdCall size={22} className="text-emerald-700" />,
+    },
+    {
+      label: "WhatsApp",
+      action: "Chat Now",
+      href: "https://wa.link/xdcypy",
+      icon: <FaWhatsapp size={22} className="text-emerald-700" />,
+    },
+    {
+      label: "Instagram",
+      action: "Send Message",
+      href: "https://www.instagram.com/equilibriuminsurancebroker/",
+      icon: <BsInstagram size={22} className="text-emerald-700" />,
+    },
+    {
+      label: "Email",
+      action: "Send Mail",
+      href: "mailto:equilibriuminsurancebroker@gmail.com",
+      icon: <BiLogoGmail size={22} className="text-emerald-700" />,
+    },
+  ];
+
   return (
-    <section className="w-full p-8 lg:py-[120px] flex flex-col items-center justify-center">
-      <div className="flex flex-wrap items-center justify-between w-full max-w-screen-xl px-6">
-        {/* Left Side */}
-        <div className="flex flex-col gap-6 w-full md:w-1/2">
-          <div data-aos="fade-left">
-            <span className="text-2xl font-semibold text-institution">
-              Easy to Contact us
-            </span>
-          </div>
-          <span className="text-lg text-gray-600 dark:text-white">
-            We are always ready to help by providing the best services for you.
-            We believe a good place to live can make your life better.
-          </span>
+    <section className="relative bg-[#f4f7f3] py-12 lg:py-28">
 
-          <div className="flex flex-wrap gap-6 mt-6">
-            {/* First Row */}
-            <div className="flex flex-wrap gap-6 w-full sm:w-1/2 md:w-full">
-              <div className="flex flex-col items-center bg-white p-4 border border-gray-300 rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-lg w-full sm:w-1/2 md:w-auto">
-                <div className="flex items-center gap-4">
-                  <div className="flex justify-center items-center bg-lightBlue rounded-full p-2">
-                    <MdCall size={25} color="green" />
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="text-lg font-semibold dark:text-gray-700">
-                      Call
-                    </span>
-                  </div>
-                </div>
-                <a href="">
-                  <button className="w-full bg-lightBlue text-green-600 py-2 font-semibold hover:bg-green-600 hover:text-white transition-all">
-                    Call Now
-                  </button>
-                </a>
-              </div>
-
-              <div className="flex flex-col items-center bg-white p-4 border border-gray-300 rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-lg w-full sm:w-1/2 md:w-auto">
-                <div className="flex items-center gap-4">
-                  <div className="flex justify-center items-center bg-lightBlue rounded-full p-2">
-                    <FaWhatsapp size={25} color="green" />
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="text-lg font-semibold dark:text-gray-700">
-                      Whatsapp
-                    </span>
-                  </div>
-                </div>
-                <a href="https://wa.link/xdcypy">
-                  <button className="w-full bg-lightBlue text-green-600 py-2 font-semibold hover:bg-green-600 hover:text-white transition-all">
-                    Chat Now
-                  </button>
-                </a>
-              </div>
+      <div className="container relative mx-auto px-6">
+        <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
+          <div className="space-y-8">
+            <div className="inline-flex items-center gap-2 rounded-full border border-emerald-900/10 bg-white/80 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-800">
+              Let’s Connect
             </div>
 
-            {/* Second Row */}
-            <div className="flex flex-wrap gap-6 w-full sm:w-1/2 md:w-full">
-              <div className="flex flex-col items-center bg-white p-4 border border-gray-300 rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-lg w-full sm:w-1/2 md:w-auto">
-                <div className="flex items-center gap-4">
-                  <div className="flex justify-center items-center bg-lightBlue rounded-full p-2">
-                    <BsInstagram size={25} color="green" />
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="text-lg font-semibold dark:text-gray-700">
-                      Instagram
-                    </span>
-                  </div>
-                </div>
-                <a href="https://www.instagram.com/equilibriuminsurancebroker/">
-                  <button className="w-full text-green-600 py-2 font-semibold hover:bg-green-600 hover:text-white transition-all">
-                    Send Message
-                  </button>
-                </a>
-              </div>
+            <div className="space-y-4">
+              <h2 className="text-4xl font-semibold leading-tight tracking-tight text-slate-900 md:text-5xl">
+                We make it easy to reach a real advisor.
+              </h2>
+              <p className="max-w-xl text-lg text-slate-700">
+                Whether you need a quick quote or a full policy review, our team
+                is ready to respond with clear guidance and coverage that fits.
+              </p>
+            </div>
 
-              <div className="flex flex-col items-center bg-white p-4 border border-gray-300 rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-lg w-full sm:w-1/2 md:w-auto">
-                <div className="flex items-center gap-4">
-                  <div className="flex justify-center items-center bg-lightBlue rounded-full p-2">
-                    <BiLogoGmail size={25} color="green" />
+            <div className="grid gap-4 sm:grid-cols-2">
+              {contactOptions.map((option) => (
+                <div
+                  key={option.label}
+                  className="group rounded-2xl border border-emerald-900/10 bg-white/80 p-5 shadow-[0_14px_30px_rgba(15,23,42,0.08)] transition hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(5,150,105,0.18)]"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-full bg-emerald-100/80">
+                      {option.icon}
+                    </div>
+                    <div>
+                      <p className="text-lg font-semibold text-slate-900">
+                        {option.label}
+                      </p>
+                      <p className="text-sm text-slate-600">
+                        Average response under 2 hours
+                      </p>
+                    </div>
                   </div>
-                  <div className="flex flex-col">
-                    <span className="text-lg font-semibold dark:text-gray-700">
-                      Gmail
-                    </span>
-                  </div>
+                  <a href={option.href} className="mt-4 block">
+                    <button className="w-full rounded-full border border-emerald-700/20 bg-emerald-50 px-4 py-2 text-sm font-semibold uppercase tracking-[0.2em] text-emerald-800 transition hover:bg-emerald-700 hover:text-white">
+                      {option.action}
+                    </button>
+                  </a>
                 </div>
-                <a href="mailto:equilibriuminsurancebroker@gmail.com">
-                  <button className="w-full bg-lightBlue text-green-600 py-2 font-semibold hover:bg-green-600 hover:text-white transition-all">
-                    Send Mail
-                  </button>
-                </a>
-              </div>
+              ))}
+            </div>
+
+            <div className="flex flex-wrap items-center gap-4 text-sm text-slate-700">
+              <span className="rounded-full border border-emerald-700/20 bg-white/80 px-4 py-2 font-semibold uppercase tracking-[0.2em] text-emerald-800">
+                24/7 Claims Support
+              </span>
+              <span className="rounded-full border border-emerald-700/20 bg-white/80 px-4 py-2 font-semibold uppercase tracking-[0.2em] text-emerald-800">
+                Independent Brokerage
+              </span>
             </div>
           </div>
-        </div>
 
-        {/* Right Side (Image) */}
-        <div className="w-full md:w-1/2 mt-6 md:mt-0">
-          <div className="relative w-full h-full">
-            {!imageLoaded && (
-              <div className="animate-pulse bg-gray-300 rounded-md w-full lg:h-[500px] md:h-[800px] sm:h-[200px]" />
-            )}
-            <img
-              src={contactImg}
-              alt="Contact"
-              onLoad={() => setImageLoaded(true)}
-              className={`w-full lg:h-[500px] md:h-[800px] sm:h-[200px] object-cover rounded-md ${
-                imageLoaded ? "block" : "hidden"
-              }`}
-            />
+          <div className="relative">
+            <div className="relative overflow-hidden rounded-3xl border border-emerald-900/10 bg-white/80 shadow-[0_22px_45px_rgba(15,23,42,0.12)]">
+              {!imageLoaded && (
+                <div className="h-[520px] w-full animate-pulse bg-gradient-to-br from-emerald-50 via-emerald-100 to-emerald-50" />
+              )}
+              <img
+                src={contactImg}
+                alt="Contact"
+                onLoad={() => setImageLoaded(true)}
+                className={`h-[520px] w-full object-cover ${
+                  imageLoaded ? "block" : "hidden"
+                }`}
+              />
+            </div>
+            <div className="absolute -bottom-8 left-8 rounded-2xl border border-emerald-900/10 bg-white/90 px-5 py-4 text-sm text-slate-700 shadow-[0_14px_30px_rgba(15,23,42,0.12)]">
+              <p className="font-semibold text-slate-900">Office Hours</p>
+              <p className="mt-1">Mon–Fri · 8:00am – 6:00pm</p>
+              <p className="text-xs text-slate-500">Emergency claims anytime.</p>
+            </div>
           </div>
         </div>
       </div>
